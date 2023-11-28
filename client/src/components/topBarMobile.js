@@ -1,5 +1,5 @@
 export default function topBarMobile() {
-  return `<div class="top-bar-mobile">
+  return `<div id="top-bar-mobile" class="top-bar-mobile">
 
   </div>`;
 }

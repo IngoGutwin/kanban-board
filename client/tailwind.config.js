@@ -21,6 +21,11 @@ module.exports = {
         jakarta: ['PlusJakartaSans', 'sans'],
       },
     },
+    screens: {
+      sm: '375px',
+      md: '730px',
+      lg: '1024px',
+    },
   },
   plugins: [],
 };

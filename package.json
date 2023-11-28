@@ -2,7 +2,6 @@
   "name": "kanban_board",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
@@ -18,6 +17,6 @@
     "kill-ports": "npm run kill-server && npm run kill-client"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ingo Gutwin",
   "license": "ISC"
 }

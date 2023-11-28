@@ -18,5 +18,10 @@
       }
     ],
     "arrow-body-style": ["error", "always"]
+  },
+  "import/resolver": {
+    "webpack": {
+      "extensions": [".js", ".scss"]
+    }
   }
 }

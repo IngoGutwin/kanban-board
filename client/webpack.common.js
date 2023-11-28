@@ -28,6 +28,7 @@ module.exports = {
       title: 'Kanban-Board',
       filename: 'index.html',
       template: 'src/index.html',
+      favicon: 'src/assets/icons/logo-mobile.svg',
     }),
   ],
   module: {
