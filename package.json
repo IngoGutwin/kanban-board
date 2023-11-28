@@ -1,0 +1,23 @@
+{
+  "name": "kanban_board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm run watch --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm run clean-public-folder",
+    "clean-public-folder": "rm -rfv server/public && npm run copy-files",
+    "copy-files": "cp -r client/dist/ server/public/",
+    "kill-server": "sudo fuser -k 9080/tcp",
+    "kill-client": "sudo fuser -k 3000/tcp",
+    "kill-ports": "npm run kill-server && npm run kill-client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
