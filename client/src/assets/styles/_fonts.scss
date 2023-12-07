@@ -17,29 +17,3 @@
   font-family: PlusJakartaSans-MediumItalic;
   src: url('@@/assets/fonts/PlusJakartaSans-MediumItalic.ttf') format('ttf');
 }
-
-body {
-  @apply font-jakarta;
-}
-
-h1 {
-  @apply text-lg font-bold;
-}
-
-h2 {
-  @apply text-base leading-6 font-bold;
-}
-
-h3 {
-  @apply text-xs leading-5 font-bold;
-}
-
-h3 {
-  @apply text-base leading-3 font-bold;
-}
-
-@screen md {
-  h1 {
-    @apply text-2xl leading-8 font-bold;
-  }
-}
