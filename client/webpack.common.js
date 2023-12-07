@@ -16,6 +16,8 @@ module.exports = {
     alias: {
       '@@': path.resolve(__dirname, 'src/'),
       Styles: path.resolve(__dirname, 'src/assets/styles/'),
+      Components: path.resolve(__dirname, 'src/components/'),
+      Utils: path.resolve(__dirname, 'src/utils/'),
     },
   },
   optimization: {
