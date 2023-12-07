@@ -1,10 +1,10 @@
 @use './_fonts.scss' as fs;
-@use './_topBarMobile.scss';
+@use './_topBar.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .app-container {
-  @apply bg-light-grey dark:bg-very-dark-grey w-full h-screen;
+  @apply bg-light-grey dark:bg-very-dark-grey w-full;
 }
