@@ -78,5 +78,9 @@
 @screen md {
   .side-bar {
     @apply static translate-x-0 rounded-none justify-between;
+
+    .side-bar-boards {
+      @apply ml-3;
+    }
   }
 }
