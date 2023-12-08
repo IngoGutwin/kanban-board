@@ -1,3 +1,9 @@
 .top-bar {
-  @apply py-3 bg-white dark:bg-dark-grey flex;
+  @apply py-5 bg-white dark:bg-dark-grey flex;
+}
+
+@screen md {
+  .top-bar {
+    @apply py-7;
+  }
 }

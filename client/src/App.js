@@ -1,18 +1,10 @@
+import data from '../data/data.json';
+import 'external-svg-loader';
 import 'Styles/base.scss';
-import topBarMobile from './components/topBarMobile';
-import topBar from './components/topBar';
-import { setThemeMode, toggleThemeMode } from './utils/themeMode';
-
-const app = document.querySelector('#app');
+import { loadLayout } from 'Utils/loadLayout.js';
 
 function loadApp() {
-  setThemeMode();
-}
-
-function checkTheme() {
-  toggleThemeMode();
-  console.log(localStorage.theme);
+  loadLayout(data.boards);
 }
 
 window.addEventListener('load', loadApp);
-window.addEventListener('click', checkTheme);
