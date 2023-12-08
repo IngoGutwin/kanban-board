@@ -1,17 +1,14 @@
-import { topBar } from 'Components/topBar.js';
+import { topBar, logo } from 'Components/topBar.js';
 import { setThemeMode } from './themeMode';
 import { sideBar } from 'Components/sideBar';
 
 const htmlElements = {
   app: null,
   topBar: null,
+  logoContainer: null,
   sideBar: null,
+  logo: null,
 };
-
-function getHtmlElements() {
-  htmlElements.topBar = document.querySelector('#top-bar');
-  htmlElements.sideBar = document.querySelector('#side-bar');
-}
 
 function setSidebarHeight() {
   const appContainerHeight = htmlElements.app.offsetHeight;
@@ -20,13 +17,43 @@ function setSidebarHeight() {
   htmlElements.sideBar.style.height = `${sideBarHeight}px`;
 }
 
+function reloadLogo() {
+  htmlElements.logo.remove();
+  htmlElements.logoContainer.insertAdjacentHTML('afterbegin', logo());
+  htmlElements.logo = document.querySelector('#logo');
+}
+
+function loadOnScreenResize() {
+  if (
+    window.screen.availWidth < 700 &&
+    htmlElements.logo.dataset.logo !== 'mobile'
+  ) {
+    reloadLogo();
+  } else if (
+    window.screen.availWidth > 700 &&
+    htmlElements.logo.dataset.logo === 'mobile'
+  ) {
+    reloadLogo();
+  }
+}
+
+function getHtmlElements() {
+  htmlElements.topBar = document.querySelector('#top-bar');
+  htmlElements.sideBar = document.querySelector('#side-bar');
+  htmlElements.logoContainer = document.querySelector('#logo-container');
+}
+
 export function loadLayout(boardsData) {
-  htmlElements.app = document.querySelector('#app');
   setThemeMode();
-  app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
-  app.insertAdjacentHTML('afterbegin', topBar(boardsData));
+  htmlElements.app = document.querySelector('#app');
+  htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
+  htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
   getHtmlElements();
+  htmlElements.logoContainer.insertAdjacentHTML('afterbegin', logo());
   setTimeout(() => {
     setSidebarHeight();
-  }, 150);
+  }, 300);
+  htmlElements.logo = document.querySelector('#logo');
 }
+
+window.addEventListener('resize', loadOnScreenResize);
