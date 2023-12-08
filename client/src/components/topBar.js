@@ -5,7 +5,7 @@ import addTask from 'Icons/icon-add-task-mobile.svg';
 import ellipsis from 'Icons/icon-vertical-ellipsis.svg';
 
 function getLogoType() {
-  if (window.screen.availWidth < 700) {
+  if (window.innerWidth < 700) {
     return [logoMobile, 'mobile'];
   } else {
     return [
