@@ -24,7 +24,7 @@ export function topBar(boardsData) {
   return `
     <div class="top-bar" id="top-bar">
       <div class="logo-container" id="logo-container"></div>
-      <div class="board-title">
+      <div class="board-title" id="board-title">
         <h1 class="board-title-title">${boardsData[0].name}</h1>
       </div>
       <div class="board-controls">

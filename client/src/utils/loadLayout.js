@@ -15,6 +15,7 @@ const htmlElements = {
   sideBarToggleBtn: null,
   sideBarToggleContainer: null,
   sideBarToggleIcon: null,
+  boardTitle: null,
 };
 
 function setSidebarHeight() {
@@ -34,31 +35,31 @@ function loadLogo() {
   htmlElements.logo = document.querySelector('#logo');
 }
 
-function loadOnScreenResize() {
-  if (window.innerWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
-    loadLogo();
-  } else if (
-    window.innerWidth > 700 &&
-    htmlElements.logo.dataset.logo === 'mobile'
-  ) {
-    loadLogo();
-  }
-}
-
 function getHtmlElements() {
   htmlElements.topBar = document.querySelector('#top-bar');
   htmlElements.sideBar = document.querySelector('#side-bar');
   htmlElements.logoContainer = document.querySelector('#logo-container');
+  htmlElements.sideBarToggleBtn = document.querySelector(
+    '#side-bar-toggle-btn'
+  );
+  htmlElements.sideBarToggleContainer = document.querySelector(
+    '#side-bar-toggle-container'
+  );
+  htmlElements.boardTitle = document.querySelector('#board-title');
+}
+
+function reloadSideBarToggleIcon() {
+  htmlElements.sideBarToggleBtn.insertAdjacentHTML(
+    'afterbegin',
+    loadSideBarToggleIcon()
+  );
 }
 
 function updateSideBarState(state) {
   htmlElements.sideBar.dataset.sideBarToggle = state;
   htmlElements.sideBarToggleContainer.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
-  htmlElements.sideBarToggleBtn.insertAdjacentHTML(
-    'afterbegin',
-    loadSideBarToggleIcon()
-  );
+  reloadSideBarToggleIcon();
 }
 
 function toggleSideBar() {
@@ -75,13 +76,27 @@ function toggleSideBar() {
 }
 
 function activateEventListeners() {
-  htmlElements.sideBarToggleBtn = document.querySelector(
-    '#side-bar-toggle-btn'
-  );
+  getHtmlElements();
+  htmlElements.sideBarToggleBtn.addEventListener('click', toggleSideBar);
+}
+
+function loadSideBarToggle() {
+  if (htmlElements.sideBarToggleContainer !== null) {
+    htmlElements.sideBarToggleContainer.remove();
+  }
+  function insertToggle() {
+    if (window.innerWidth < 700) {
+      htmlElements.sideBar.style.height = null;
+      htmlElements.boardTitle.insertAdjacentHTML('beforeend', sideBarToggle());
+    } else if (window.innerWidth > 700) {
+      htmlElements.sideBar.insertAdjacentHTML('beforeend', sideBarToggle());
+      setSidebarHeight();
+    }
+  }
+  insertToggle();
   htmlElements.sideBarToggleContainer = document.querySelector(
     '#side-bar-toggle-container'
   );
-  htmlElements.sideBarToggleBtn.addEventListener('click', toggleSideBar);
 }
 
 export function loadLayout(boardsData) {
@@ -90,10 +105,22 @@ export function loadLayout(boardsData) {
   htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
   htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
   getHtmlElements();
-  htmlElements.sideBar.insertAdjacentHTML('beforeend', sideBarToggle());
-  setSidebarHeight();
   loadLogo();
+  loadSideBarToggle();
   activateEventListeners();
+}
+
+function loadOnScreenResize() {
+  if (window.innerWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
+    loadLogo();
+    loadSideBarToggle();
+  } else if (
+    window.innerWidth > 700 &&
+    htmlElements.logo.dataset.logo === 'mobile'
+  ) {
+    loadLogo();
+    loadSideBarToggle();
+  }
 }
 
 window.addEventListener('resize', loadOnScreenResize);

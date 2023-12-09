@@ -6,21 +6,19 @@ import hideSideBar from 'Icons/icon-hide-sidebar.svg';
 import showSideBar from 'Icons/icon-show-sidebar.svg';
 
 export function loadSideBarToggleIcon() {
-  let result = [];
+  let result = ['', ''];
   if (!('sideBar' in localStorage)) {
     localStorage.sideBar = 'open';
     loadSideBarToggleIcon();
   } else {
     if (window.innerWidth < 700) {
       result[0] = chevron;
-      result[1] = '';
     } else {
       if (localStorage.sideBar === 'open') {
         result[0] = hideSideBar;
         result[1] = 'Hide Sidebar';
       } else {
         result[0] = showSideBar;
-        result[1] = '';
       }
     }
   }
