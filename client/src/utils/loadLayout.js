@@ -1,5 +1,5 @@
 import { topBar, logo } from 'Components/topBar';
-import { setThemeMode } from './themeMode';
+import { setThemeMode, toggleThemeMode } from './themeMode';
 import {
   sideBar,
   sideBarToggle,
@@ -16,6 +16,7 @@ const htmlElements = {
   sideBarToggleContainer: null,
   sideBarToggleIcon: null,
   boardTitle: null,
+  themeModeToggle: null,
 };
 
 function setSidebarHeight() {
@@ -46,6 +47,9 @@ function getHtmlElements() {
     '#side-bar-toggle-container'
   );
   htmlElements.boardTitle = document.querySelector('#board-title');
+  htmlElements.themeModeToggle = htmlElements.sideBar.querySelector(
+    '#side-bar-theme-mode'
+  );
 }
 
 function reloadSideBarToggleIcon() {
@@ -75,7 +79,14 @@ function toggleSideBar() {
   }
 }
 
-function activateEventListeners() {
+function activateEventlistenersOnce() {
+  htmlElements.themeModeToggle.addEventListener('click', () => {
+    toggleThemeMode(htmlElements.themeModeToggle);
+    loadLogo();
+  });
+}
+
+function reloadEventListeners() {
   getHtmlElements();
   htmlElements.sideBarToggleBtn.addEventListener('click', toggleSideBar);
 }
@@ -107,21 +118,22 @@ export function loadLayout(boardsData) {
   getHtmlElements();
   loadLogo();
   loadSideBarToggle();
-  activateEventListeners();
+  reloadEventListeners();
+  activateEventlistenersOnce();
 }
 
 function loadOnScreenResize() {
   if (window.innerWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
     loadLogo();
     loadSideBarToggle();
-    activateEventListeners();
+    reloadEventListeners();
   } else if (
     window.innerWidth > 700 &&
     htmlElements.logo.dataset.logo === 'mobile'
   ) {
     loadLogo();
     loadSideBarToggle();
-    activateEventListeners();
+    reloadEventListeners();
   }
 }
 
