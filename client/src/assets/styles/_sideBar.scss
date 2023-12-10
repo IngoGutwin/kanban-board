@@ -73,11 +73,14 @@
       @apply justify-end;
     }
   }
+  &[data-side-bar-toggle='hidden'] {
+    @apply translate-x-[-150%];
+  }
 }
 
 @screen md {
   .side-bar {
-    @apply static rounded-none justify-between;
+    @apply static rounded-none justify-between border-r border-r-lines-light dark:border-r-lines-dark;
 
     .side-bar-boards {
       @apply ml-3 flex-grow;

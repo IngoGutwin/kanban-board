@@ -114,12 +114,14 @@ function loadOnScreenResize() {
   if (window.innerWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
     loadLogo();
     loadSideBarToggle();
+    activateEventListeners();
   } else if (
     window.innerWidth > 700 &&
     htmlElements.logo.dataset.logo === 'mobile'
   ) {
     loadLogo();
     loadSideBarToggle();
+    activateEventListeners();
   }
 }
 
