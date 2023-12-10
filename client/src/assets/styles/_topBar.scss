@@ -1,35 +1,49 @@
 .top-bar {
-  @apply bg-white dark:bg-dark-grey flex;
+  @apply bg-white dark:bg-dark-grey flex items-center transition-transform ease-linear;
 
   .logo-container {
-    @apply pl-4;
+    @apply pl-4 py-5;
     .logo {
       @apply w-6;
     }
   }
 
   .board-title {
-    @apply pl-4;
+    @apply flex items-center pl-4;
+
+    .side-bar-toggle-container {
+      .side-bar-toggle-btn {
+        @apply px-5 py-5 transition-transform ease-linear;
+
+        &:hover {
+          @apply animate-bounce;
+        }
+      }
+
+      &[data-side-bar-toggle='hidden'] {
+        @apply rotate-90;
+      }
+    }
   }
 
-  &:nth-child(n) {
-    @apply py-5;
+  .board-controls {
+    @apply flex-grow py-5;
   }
 }
 
 @screen md {
   .top-bar {
     .logo-container {
-      @apply w-5/6 max-w-xs pl-9;
+      @apply w-5/6 max-w-xs pl-9 py-7 border-r border-r-lines-light dark:border-r-lines-dark;
       .logo {
         @apply w-36;
       }
     }
     .board-title {
-      @apply pl-6;
+      @apply pl-6 py-7;
     }
-    &:nth-child(n) {
-      @apply py-7;
+    .board-controls {
+      @apply py-5;
     }
   }
 }

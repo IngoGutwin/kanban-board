@@ -5,7 +5,7 @@ import addTask from 'Icons/icon-add-task-mobile.svg';
 import ellipsis from 'Icons/icon-vertical-ellipsis.svg';
 
 function getLogoType() {
-  if (window.screen.availWidth < 700) {
+  if (window.innerWidth < 700) {
     return [logoMobile, 'mobile'];
   } else {
     return [
@@ -24,7 +24,7 @@ export function topBar(boardsData) {
   return `
     <div class="top-bar" id="top-bar">
       <div class="logo-container" id="logo-container"></div>
-      <div class="board-title">
+      <div class="board-title" id="board-title">
         <h1 class="board-title-title">${boardsData[0].name}</h1>
       </div>
       <div class="board-controls">
