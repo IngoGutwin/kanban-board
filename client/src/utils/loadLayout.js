@@ -79,7 +79,7 @@ function toggleSideBar() {
   }
 }
 
-function activateEventlistenersOnce() {
+function activateEventListeners() {
   htmlElements.themeModeToggle.addEventListener('click', () => {
     toggleThemeMode(htmlElements.themeModeToggle);
     loadLogo();
@@ -119,7 +119,7 @@ export function loadLayout(boardsData) {
   loadLogo();
   loadSideBarToggle();
   reloadEventListeners();
-  activateEventlistenersOnce();
+  activateEventListeners();
 }
 
 function loadOnScreenResize() {
