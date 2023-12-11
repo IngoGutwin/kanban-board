@@ -63,7 +63,9 @@ export function sideBar(boardsData) {
           <h3 class="side-bar-new-board-heading">+ Create New Board</h3>
         </button>
       </div>
-      <div class="side-bar-theme-mode" id="side-bar-theme-mode" data-theme-mode="dark">
+      <div class="side-bar-theme-mode" id="side-bar-theme-mode" data-theme-mode="${
+        localStorage.theme
+      }">
         <svg data-src=${lightMode} class="side-bar-theme-mode-icon"/>
         <div class="side-bar-theme-mode-toggle">
           <button class="side-bar-theme-mode-btn"></button>
