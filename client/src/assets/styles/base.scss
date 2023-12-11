@@ -1,10 +1,32 @@
-@use './_fonts.scss' as fs;
-@use './_topBarMobile.scss';
+@use './_fonts.scss';
+@use './_topBar.scss';
+@use './_sideBar.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// heading XL & L
+h1 {
+  @apply text-lg font-bold;
+}
+
+// heading M
+h2 {
+  @apply text-base leading-6 font-bold;
+}
+
+// heading S
+h3 {
+  @apply text-xs leading-5 font-bold;
+}
+
+@screen md {
+  h1 {
+    @apply text-2xl leading-8 font-bold;
+  }
+}
+
 .app-container {
-  @apply bg-light-grey dark:bg-very-dark-grey w-full h-screen;
+  @apply bg-light-grey dark:bg-very-dark-grey text-black dark:text-white w-full font-jakarta h-screen;
 }

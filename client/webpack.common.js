@@ -16,6 +16,9 @@ module.exports = {
     alias: {
       '@@': path.resolve(__dirname, 'src/'),
       Styles: path.resolve(__dirname, 'src/assets/styles/'),
+      Components: path.resolve(__dirname, 'src/components/'),
+      Utils: path.resolve(__dirname, 'src/utils/'),
+      Icons: path.resolve(__dirname, 'src/assets/images/icons/'),
     },
   },
   optimization: {
@@ -28,7 +31,7 @@ module.exports = {
       title: 'Kanban-Board',
       filename: 'index.html',
       template: 'src/index.html',
-      favicon: 'src/assets/icons/logo-mobile.svg',
+      favicon: 'src/assets/images/icons/logo-mobile.svg',
     }),
   ],
   module: {
