@@ -3,7 +3,7 @@
 
   .side-bar-boards {
     .side-bar-heading {
-      @apply py-2 px-6 my-1;
+      @apply py-3 px-6;
     }
     .side-bar-board {
       @apply flex items-center py-2 px-6 my-1 w-11/12 rounded-r-full transition-colors ease-linear;
@@ -83,7 +83,19 @@
     @apply static rounded-none justify-between border-r border-r-lines-light dark:border-r-lines-dark;
 
     .side-bar-boards {
-      @apply ml-3 flex-grow;
+      @apply flex-grow;
+
+      .side-bar-heading {
+        @apply pl-9;
+      }
+
+      .side-bar-board {
+        @apply pl-9;
+      }
+
+      .side-bar-new-board {
+        @apply pl-9;
+      }
     }
 
     .side-bar-toggle-container {

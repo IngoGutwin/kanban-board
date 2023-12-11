@@ -43,7 +43,7 @@ function loadBoards(boardsData) {
     (board) => `
     <button class="side-bar-board">
       <svg data-src=${boardIcon} class="side-bar-board-icon"/>
-      <h3 class="side-bar-board-name">${board.name}</h3>
+      <h2 class="side-bar-board-name">${board.name}</h2>
     </button>  
   `
   );
@@ -60,7 +60,7 @@ export function sideBar(boardsData) {
         ${loadBoards(boardsData)}
         <button class="side-bar-new-board">
           <svg data-src=${boardIcon} class="side-bar-new-board-icon"/>
-          <h3 class="side-bar-new-board-heading">+ Create New Board</h3>
+          <h2 class="side-bar-new-board-heading">+ Create New Board</h2>
         </button>
       </div>
       <div class="side-bar-theme-mode" id="side-bar-theme-mode" data-theme-mode="dark">

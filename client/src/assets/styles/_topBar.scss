@@ -27,14 +27,37 @@
   }
 
   .board-controls {
+<<<<<<< Updated upstream
     @apply flex-grow py-5;
+=======
+    @apply flex justify-end items-center flex-grow gap-4 py-5;
+
+    .add-new-task-btn {
+      @apply py-3 px-6 bg-main-purple flex items-center rounded-full;
+
+      .add-new-task-icon {
+        @apply h-3 fill-white;
+      }
+
+      .add-new-task-paragraph {
+        @apply hidden;
+      }
+    }
+    .board-options {
+      @apply p-4 pr-9 flex justify-center items-center;
+
+      .board-options-icon {
+        @apply h-4 fill-medium-grey;
+      }
+    }
+>>>>>>> Stashed changes
   }
 }
 
 @screen md {
   .top-bar {
     .logo-container {
-      @apply w-5/6 max-w-xs pl-9 py-7 border-r border-r-lines-light dark:border-r-lines-dark;
+      @apply w-5/6 max-w-xs pl-9 py-8 border-r border-r-lines-light dark:border-r-lines-dark;
       .logo {
         @apply w-36;
       }

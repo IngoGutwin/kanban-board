@@ -1,6 +1,7 @@
 @use './_fonts.scss';
 @use './_topBar.scss';
 @use './_sideBar.scss';
+@use './_taskBar.scss';
 
 @tailwind base;
 @tailwind components;
@@ -28,5 +29,5 @@ h3 {
 }
 
 .app-container {
-  @apply bg-light-grey dark:bg-very-dark-grey text-black dark:text-white w-full font-jakarta h-screen;
+  @apply bg-light-grey dark:bg-very-dark-grey text-black dark:text-white w-full font-jakarta h-screen transition-colors ease-in;
 }
