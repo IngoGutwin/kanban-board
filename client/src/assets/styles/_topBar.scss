@@ -27,9 +27,6 @@
   }
 
   .board-controls {
-<<<<<<< Updated upstream
-    @apply flex-grow py-5;
-=======
     @apply flex justify-end items-center flex-grow gap-4 py-5;
 
     .add-new-task-btn {
@@ -50,7 +47,6 @@
         @apply h-4 fill-medium-grey;
       }
     }
->>>>>>> Stashed changes
   }
 }
 
