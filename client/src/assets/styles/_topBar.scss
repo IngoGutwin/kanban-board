@@ -40,7 +40,7 @@
         @apply hidden;
       }
 
-      &[data-board-active='true'] {
+      &[data-has-tasks='true'] {
         @apply opacity-100;
       }
     }

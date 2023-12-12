@@ -21,14 +21,18 @@ export function logo() {
 }
 
 export function topBar(boardsData) {
+  if (boardsData[0] === undefined) {
+    console.log(boardsData);
+    boardsData[0] = { name: 'NO BOARDS' };
+  }
   return `
     <div class="top-bar" id="top-bar">
       <div class="logo-container" id="logo-container"></div>
       <div class="board-title" id="board-title">
-        <h1 class="board-title-title">${boardsData[0].name}</h1>
+        <h1 class="board-title-title" id="board-title-title">${boardsData[0].name}</h1>
       </div>
       <div class="board-controls">
-        <button class="add-new-task-btn" id="add-new-task-btn" data-board-active="false">
+        <button class="add-new-task-btn" id="add-new-task-btn" data-has-tasks="false">
           <svg data-src=${addTask} class="add-new-task-icon"/>
           <h2 class="add-new-task-paragraph">Add New Task</h2>
         </button>
