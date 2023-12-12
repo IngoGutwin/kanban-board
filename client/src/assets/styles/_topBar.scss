@@ -1,5 +1,5 @@
 .top-bar {
-  @apply bg-white dark:bg-dark-grey flex items-center transition-transform ease-linear;
+  @apply bg-white dark:bg-dark-grey flex items-center transition ease-in duration-300;
 
   .logo-container {
     @apply pl-4 py-5;
