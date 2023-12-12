@@ -5,8 +5,6 @@ import chevron from 'Icons/icon-chevron-down.svg';
 import hideSideBar from 'Icons/icon-hide-sidebar.svg';
 import showSideBar from 'Icons/icon-show-sidebar.svg';
 
-import { button } from './button';
-
 export function loadSideBarToggleIcon() {
   let result = ['', ''];
   if (!('sideBar' in localStorage)) {
@@ -33,11 +31,9 @@ export function sideBarToggle() {
       id="side-bar-toggle-container" 
       data-side-bar-toggle="${localStorage.sideBar}"
     >
-      ${button({
-        cssClass: 'side-bar-toggle-btn',
-        id: 'side-bar-toggle-btn',
-        innerHtml: loadSideBarToggleIcon(),
-      })}
+      <button class="side-bar-toggle-btn" id="side-bar-toggle-btn">
+        ${loadSideBarToggleIcon()}
+      </button>
     </div>
   `;
 }
@@ -46,9 +42,9 @@ function loadBoards(boardsData) {
   const boardButtons = boardsData.map(
     (board) => `
     <button class="side-bar-board" data-board-active="false">
-      <svg data-src=${boardIcon} class="side-bar-board-icon"/>
-      <h2 class="side-bar-board-name">${board.name}</h2>
-    </button>  
+        <svg data-src=${boardIcon} class="side-bar-board-icon"/>
+        <h2 class="side-bar-board-name">${board.name}</h2>
+      </button>
   `
   );
   return boardButtons.join('');
