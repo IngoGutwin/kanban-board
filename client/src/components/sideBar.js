@@ -5,6 +5,8 @@ import chevron from 'Icons/icon-chevron-down.svg';
 import hideSideBar from 'Icons/icon-hide-sidebar.svg';
 import showSideBar from 'Icons/icon-show-sidebar.svg';
 
+import { button } from './button';
+
 export function loadSideBarToggleIcon() {
   let result = ['', ''];
   if (!('sideBar' in localStorage)) {
@@ -31,9 +33,11 @@ export function sideBarToggle() {
       id="side-bar-toggle-container" 
       data-side-bar-toggle="${localStorage.sideBar}"
     >
-      <button class="side-bar-toggle-btn" id="side-bar-toggle-btn">
-        ${loadSideBarToggleIcon()}
-      </button>
+      ${button({
+        cssClass: 'side-bar-toggle-btn',
+        id: 'side-bar-toggle-btn',
+        innerHtml: loadSideBarToggleIcon(),
+      })}
     </div>
   `;
 }

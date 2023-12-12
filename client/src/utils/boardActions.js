@@ -1,3 +1,5 @@
+import { taskBar } from 'Components/taskBar';
+
 const htmlElements = {
   sideBarBoards: null,
   activeBoard: null,
@@ -36,24 +38,13 @@ function updateBoardState() {
   });
 }
 
-function processInteractionOnBoards(e) {
-  if (e.currentTarget.id === 'create-new-board-btn') {
-    createNewBoard();
-  } else {
-    updateBoardState();
-    e.currentTarget.dataset.boardActive = true;
-    htmlElements.activeBoard = e.currentTarget;
-    loadBoardData();
-  }
-}
-
 function updateAddNewTaskButton(buttonState) {
   htmlElements.addNewTaskButton.dataset.hasTasks = buttonState;
 }
 
 function loadEmptyTaskBar() {
   updateAddNewTaskButton(false);
-  console.log('empty TaskBar');
+  console.log(taskBar(undefined));
 }
 
 function loadTasks(boardData) {
@@ -67,6 +58,17 @@ function loadBoardData() {
       board?.columns != undefined ? loadTasks(board) : loadEmptyTaskBar();
     }
   });
+}
+
+function processInteractionOnBoards(e) {
+  if (e.currentTarget.id === 'create-new-board-btn') {
+    createNewBoard();
+  } else {
+    updateBoardState();
+    e.currentTarget.dataset.boardActive = true;
+    htmlElements.activeBoard = e.currentTarget;
+    loadBoardData();
+  }
 }
 
 function activateEventListeners() {
