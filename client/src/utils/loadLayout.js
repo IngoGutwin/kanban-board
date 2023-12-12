@@ -48,6 +48,9 @@ function getHtmlElements() {
   );
   htmlElements.boardTitle = document.querySelector('#board-title');
   htmlElements.themeModeToggle = htmlElements.sideBar.querySelector(
+    '#side-bar-theme-mode-toggle'
+  );
+  htmlElements.themeModeContainer = htmlElements.sideBar.querySelector(
     '#side-bar-theme-mode'
   );
 }
@@ -81,7 +84,7 @@ function toggleSideBar() {
 
 function activateEventListeners() {
   htmlElements.themeModeToggle.addEventListener('click', () => {
-    toggleThemeMode(htmlElements.themeModeToggle);
+    toggleThemeMode(htmlElements.themeModeContainer);
     loadLogo();
   });
 }

@@ -41,7 +41,7 @@ export function sideBarToggle() {
 function loadBoards(boardsData) {
   const boardButtons = boardsData.map(
     (board) => `
-    <button class="side-bar-board">
+    <button class="side-bar-board" data-board-active="false">
       <svg data-src=${boardIcon} class="side-bar-board-icon"/>
       <h2 class="side-bar-board-name">${board.name}</h2>
     </button>  
@@ -52,22 +52,23 @@ function loadBoards(boardsData) {
 
 export function sideBar(boardsData) {
   return `
-    <div class="side-bar" id="side-bar" data-side-bar-toggle="${
-      localStorage.sideBar
-    }">
-      <div class="side-bar-boards">
+    <div 
+      class="side-bar"
+      id="side-bar" 
+      data-side-bar-toggle="${localStorage.sideBar}"
+    >
+      <div class="side-bar-boards" id="side-bar-boards">
         <h3 class="side-bar-heading">all boards (${boardsData.length})</h3>
         ${loadBoards(boardsData)}
-        <button class="side-bar-new-board">
+        <button class="side-bar-new-board" id="create-new-board-btn">
           <svg data-src=${boardIcon} class="side-bar-new-board-icon"/>
           <h2 class="side-bar-new-board-heading">+ Create New Board</h2>
         </button>
       </div>
-      <div class="side-bar-theme-mode" id="side-bar-theme-mode" data-theme-mode="${
-        localStorage.theme
-      }">
+      <div class="side-bar-theme-mode" id="side-bar-theme-mode" 
+        data-theme-mode="${localStorage.theme}">
         <svg data-src=${lightMode} class="side-bar-theme-mode-icon"/>
-        <div class="side-bar-theme-mode-toggle">
+        <div class="side-bar-theme-mode-toggle" id="side-bar-theme-mode-toggle">
           <button class="side-bar-theme-mode-btn"></button>
         </div>
         <svg data-src=${darkMode} class="side-bar-theme-mode-icon"/>

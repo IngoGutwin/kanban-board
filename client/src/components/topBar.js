@@ -28,7 +28,7 @@ export function topBar(boardsData) {
         <h1 class="board-title-title">${boardsData[0].name}</h1>
       </div>
       <div class="board-controls">
-        <button class="add-new-task-btn" id="add-new-task-btn">
+        <button class="add-new-task-btn" id="add-new-task-btn" data-board-active="false">
           <svg data-src=${addTask} class="add-new-task-icon"/>
           <h2 class="add-new-task-paragraph">Add New Task</h2>
         </button>
