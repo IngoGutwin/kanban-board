@@ -16,7 +16,7 @@ export function loadSideBarToggleIcon() {
     } else {
       if (localStorage.sideBar === 'open') {
         result[0] = hideSideBar;
-        result[1] = 'Hide Sidebar';
+        result[1] = '<h3>Hide Sidebar</h3>';
       } else {
         result[0] = showSideBar;
       }
@@ -43,7 +43,7 @@ function loadBoards(boardsData) {
     (board) => `
     <button class="side-bar-board" data-board-active="false">
         <svg data-src=${boardIcon} class="side-bar-board-icon"/>
-        <h2 class="side-bar-board-name">${board.name}</h2>
+        <h3 class="side-bar-board-name">${board.name}</h3>
       </button>
   `
   );
@@ -58,11 +58,11 @@ export function sideBar(boardsData) {
       data-side-bar-toggle="${localStorage.sideBar}"
     >
       <div class="side-bar-boards" id="side-bar-boards">
-        <h3 class="side-bar-heading">all boards (${boardsData.length})</h3>
+        <h4 class="side-bar-heading">all boards (${boardsData.length})</h4>
         ${loadBoards(boardsData)}
         <button class="side-bar-new-board" id="create-new-board-btn">
           <svg data-src=${boardIcon} class="side-bar-new-board-icon"/>
-          <h2 class="side-bar-new-board-heading">+ Create New Board</h2>
+          <h3 class="side-bar-new-board-heading">+ Create New Board</h3>
         </button>
       </div>
       <div class="side-bar-theme-mode" id="side-bar-theme-mode" 

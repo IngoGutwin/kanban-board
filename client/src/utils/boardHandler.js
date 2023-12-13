@@ -4,7 +4,7 @@ const htmlElements = {
   sideBarBoards: null,
   activeBoard: null,
   addNewTaskButton: null,
-  appContainer: null,
+  taskBar: null,
 };
 
 let boards = null;
@@ -83,7 +83,7 @@ function getHtmlElements() {
     .querySelector('#side-bar-boards')
     .querySelectorAll('button');
   htmlElements.addNewTaskButton = document.querySelector('#add-new-task-btn');
-  htmlElements.appContainer = document.querySelector('#app');
+  htmlElements.appContainer = document.querySelector('#task-bar');
 }
 
 export function handleBoards(boardsData) {

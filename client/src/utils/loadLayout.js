@@ -5,6 +5,7 @@ import {
   sideBarToggle,
   loadSideBarToggleIcon,
 } from 'Components/sideBar';
+import { taskBar } from 'Components/taskBar';
 
 const htmlElements = {
   app: null,
@@ -17,6 +18,7 @@ const htmlElements = {
   sideBarToggleIcon: null,
   boardTitle: null,
   themeModeToggle: null,
+  taskBar: null,
 };
 
 function setSidebarHeight() {
@@ -53,6 +55,7 @@ function getHtmlElements() {
   htmlElements.themeModeContainer = htmlElements.sideBar.querySelector(
     '#side-bar-theme-mode'
   );
+  htmlElements.taskBar = document.querySelector('#task-bar');
 }
 
 function reloadSideBarToggleIcon() {
@@ -65,8 +68,10 @@ function reloadSideBarToggleIcon() {
 function updateSideBarState(state) {
   htmlElements.sideBar.dataset.sideBarToggle = state;
   htmlElements.sideBarToggleContainer.dataset.sideBarToggle = state;
+  htmlElements.taskBar.dataset.sideBarToggle = state;
+  htmlElements.app.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
-  reloadSideBarToggleIcon();
+  // reloadSideBarToggleIcon();
 }
 
 function toggleSideBar() {
@@ -77,8 +82,10 @@ function toggleSideBar() {
   htmlElements.sideBarToggleBtn.innerText = '';
   if (localStorage.sideBar === 'open') {
     updateSideBarState('hidden');
+    reloadSideBarToggleIcon();
   } else {
     updateSideBarState('open');
+    reloadSideBarToggleIcon();
   }
 }
 
@@ -116,11 +123,13 @@ function loadSideBarToggle() {
 export function loadLayout(boardsData) {
   setThemeMode();
   htmlElements.app = document.querySelector('#app');
+  htmlElements.app.insertAdjacentHTML('afterbegin', taskBar());
   htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
   htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
   getHtmlElements();
   loadLogo();
   loadSideBarToggle();
+  updateSideBarState(localStorage.sideBar);
   reloadEventListeners();
   activateEventListeners();
 }
