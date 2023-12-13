@@ -1,10 +1,11 @@
-import { taskBar, emptyBoard } from 'Components/taskBar';
+import { emptyBoard } from 'Components/taskBar';
 
 const htmlElements = {
   sideBarBoards: null,
   activeBoard: null,
   addNewTaskButton: null,
   taskBar: null,
+  boardTitleHeading: null,
 };
 
 let boards = null;
@@ -61,6 +62,7 @@ function updateBoardState(currentTarget) {
   });
   currentTarget.dataset.boardActive = true;
   htmlElements.activeBoard = currentTarget;
+  htmlElements.boardTitleHeading.innerText = htmlElements.activeBoard.innerText;
   checkIfTasksExist();
 }
 
@@ -84,6 +86,9 @@ function getHtmlElements() {
     .querySelectorAll('button');
   htmlElements.addNewTaskButton = document.querySelector('#add-new-task-btn');
   htmlElements.appContainer = document.querySelector('#task-bar');
+  htmlElements.boardTitleHeading = document.querySelector(
+    '#board-title-heading'
+  );
 }
 
 export function handleBoards(boardsData) {

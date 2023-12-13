@@ -27,7 +27,7 @@ function setSidebarHeight() {
     const topBarHeight = htmlElements.topBar.offsetHeight;
     const sideBarHeight = appContainerHeight - topBarHeight;
     htmlElements.sideBar.style.height = `${sideBarHeight}px`;
-  }, 300);
+  }, 500);
 }
 
 function loadLogo() {
