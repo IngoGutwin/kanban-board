@@ -1,9 +1,10 @@
-import { taskBar } from 'Components/taskBar';
+import { taskBar, emptyBoard } from 'Components/taskBar';
 
 const htmlElements = {
   sideBarBoards: null,
   activeBoard: null,
   addNewTaskButton: null,
+  appContainer: null,
 };
 
 let boards = null;
@@ -27,31 +28,20 @@ function createNewBoard() {
   console.log(newBoard);
 }
 
-function updateBoardState() {
-  htmlElements.sideBarBoards.forEach((board) => {
-    if (
-      board.classList.contains('side-bar-board') &&
-      board.dataset.boardActive == 'true'
-    ) {
-      board.dataset.boardActive = false;
-    }
-  });
-}
-
 function updateAddNewTaskButton(buttonState) {
   htmlElements.addNewTaskButton.dataset.hasTasks = buttonState;
 }
 
 function loadEmptyTaskBar() {
   updateAddNewTaskButton(false);
-  console.log(taskBar(undefined));
+  htmlElements.appContainer.insertAdjacentHTML('beforeend', emptyBoard());
 }
 
 function loadTasks(boardData) {
   updateAddNewTaskButton(true);
 }
 
-function loadBoardData() {
+function checkIfTasksExist() {
   let activeBoard = htmlElements.activeBoard.innerText;
   boards.forEach((board) => {
     if (board?.name == activeBoard) {
@@ -60,14 +50,25 @@ function loadBoardData() {
   });
 }
 
+function updateBoardState(currentTarget) {
+  htmlElements.sideBarBoards.forEach((board) => {
+    if (
+      board.classList.contains('side-bar-board') &&
+      board.dataset.boardActive == 'true'
+    ) {
+      board.dataset.boardActive = false;
+    }
+  });
+  currentTarget.dataset.boardActive = true;
+  htmlElements.activeBoard = currentTarget;
+  checkIfTasksExist();
+}
+
 function processInteractionOnBoards(e) {
   if (e.currentTarget.id === 'create-new-board-btn') {
     createNewBoard();
   } else {
-    updateBoardState();
-    e.currentTarget.dataset.boardActive = true;
-    htmlElements.activeBoard = e.currentTarget;
-    loadBoardData();
+    updateBoardState(e.currentTarget);
   }
 }
 
@@ -82,9 +83,10 @@ function getHtmlElements() {
     .querySelector('#side-bar-boards')
     .querySelectorAll('button');
   htmlElements.addNewTaskButton = document.querySelector('#add-new-task-btn');
+  htmlElements.appContainer = document.querySelector('#app');
 }
 
-export function activateBoardTaskBar(boardsData) {
+export function handleBoards(boardsData) {
   boards = boardsData;
   getHtmlElements();
   activateEventListeners();
