@@ -14,10 +14,6 @@
     .side-bar-toggle-container {
       .side-bar-toggle-btn {
         @apply px-5 py-5 transition ease-linear duration-300;
-
-        &:hover {
-          @apply animate-bounce;
-        }
       }
 
       &[data-side-bar-toggle='hidden'] {
