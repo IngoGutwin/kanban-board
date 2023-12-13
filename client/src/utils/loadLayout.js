@@ -21,15 +21,6 @@ const htmlElements = {
   taskBar: null,
 };
 
-function setSidebarHeight() {
-  setTimeout(() => {
-    const appContainerHeight = htmlElements.app.offsetHeight;
-    const topBarHeight = htmlElements.topBar.offsetHeight;
-    const sideBarHeight = appContainerHeight - topBarHeight;
-    htmlElements.sideBar.style.height = `${sideBarHeight}px`;
-  }, 500);
-}
-
 function loadLogo() {
   if (htmlElements.logo !== null) {
     htmlElements.logo.remove();
@@ -111,7 +102,6 @@ function loadSideBarToggle() {
       htmlElements.boardTitle.insertAdjacentHTML('beforeend', sideBarToggle());
     } else if (window.innerWidth > 700) {
       htmlElements.sideBar.insertAdjacentHTML('beforeend', sideBarToggle());
-      setSidebarHeight();
     }
   }
   insertToggle();
