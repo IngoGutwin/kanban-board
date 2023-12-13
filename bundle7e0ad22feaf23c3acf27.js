@@ -1,12 +1,12 @@
 (self["webpackChunkkanban_client"] = self["webpackChunkkanban_client"] || []).push([[296],{
 
-/***/ 439:
+/***/ 101:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 ;// CONCATENATED MODULE: ./data/data.json
-const data_namespaceObject = JSON.parse('{"t":[{"name":"Platform Launch","columns":[{"name":"Todo","tasks":[{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for search","description":"","status":"Todo","subtasks":[{"title":"Search page","isCompleted":false}]},{"title":"Build settings UI","description":"","status":"Todo","subtasks":[{"title":"Account page","isCompleted":false},{"title":"Billing page","isCompleted":false}]},{"title":"QA and test all major user journeys","description":"Once we feel version one is ready, we need to rigorously test it both internally and externally to identify any major gaps.","status":"Todo","subtasks":[{"title":"Internal testing","isCompleted":false},{"title":"External testing","isCompleted":false}]}]},{"name":"Doing","tasks":[{"title":"Design settings and search pages","description":"","status":"Doing","subtasks":[{"title":"Settings - Account page","isCompleted":true},{"title":"Settings - Billing page","isCompleted":true},{"title":"Search page","isCompleted":false}]},{"title":"Add account management endpoints","description":"","status":"Doing","subtasks":[{"title":"Upgrade plan","isCompleted":true},{"title":"Cancel plan","isCompleted":true},{"title":"Update payment method","isCompleted":false}]},{"title":"Design onboarding flow","description":"","status":"Doing","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Add search enpoints","description":"","status":"Doing","subtasks":[{"title":"Add search endpoint","isCompleted":true},{"title":"Define search filters","isCompleted":false}]},{"title":"Add authentication endpoints","description":"","status":"Doing","subtasks":[{"title":"Define user model","isCompleted":true},{"title":"Add auth endpoints","isCompleted":false}]},{"title":"Research pricing points of various competitors and trial different business models","description":"We know what we\'re planning to build for version one. Now we need to finalise the first pricing model we\'ll use. Keep iterating the subtasks until we have a coherent proposition.","status":"Doing","subtasks":[{"title":"Research competitor pricing and business models","isCompleted":true},{"title":"Outline a business model that works for our solution","isCompleted":false},{"title":"Talk to potential customers about our proposed solution and ask for fair price expectancy","isCompleted":false}]}]},{"name":"Done","tasks":[{"title":"Conduct 5 wireframe tests","description":"Ensure the layout continues to make sense and we have strong buy-in from potential users.","status":"Done","subtasks":[{"title":"Complete 5 wireframe prototype tests","isCompleted":true}]},{"title":"Create wireframe prototype","description":"Create a greyscale clickable wireframe prototype to test our asssumptions so far.","status":"Done","subtasks":[{"title":"Create clickable wireframe prototype in Balsamiq","isCompleted":true}]},{"title":"Review results of usability tests and iterate","description":"Keep iterating through the subtasks until we\'re clear on the core concepts for the app.","status":"Done","subtasks":[{"title":"Meet to review notes from previous tests and plan changes","isCompleted":true},{"title":"Make changes to paper prototypes","isCompleted":true},{"title":"Conduct 5 usability tests","isCompleted":true}]},{"title":"Create paper prototypes and conduct 10 usability tests with potential customers","description":"","status":"Done","subtasks":[{"title":"Create paper prototypes for version one","isCompleted":true},{"title":"Complete 10 usability tests","isCompleted":true}]},{"title":"Market discovery","description":"We need to define and refine our core product. Interviews will help us learn common pain points and help us define the strongest MVP.","status":"Done","subtasks":[{"title":"Interview 10 prospective customers","isCompleted":true}]},{"title":"Competitor analysis","description":"","status":"Done","subtasks":[{"title":"Find direct and indirect competitors","isCompleted":true},{"title":"SWOT analysis for each competitor","isCompleted":true}]},{"title":"Research the market","description":"We need to get a solid overview of the market to ensure we have up-to-date estimates of market size and demand.","status":"Done","subtasks":[{"title":"Write up research analysis","isCompleted":true},{"title":"Calculate TAM","isCompleted":true}]}]}]},{"name":"Marketing Plan","columns":[{"name":"Todo","tasks":[{"title":"Plan Product Hunt launch","description":"","status":"Todo","subtasks":[{"title":"Find hunter","isCompleted":false},{"title":"Gather assets","isCompleted":false},{"title":"Draft product page","isCompleted":false},{"title":"Notify customers","isCompleted":false},{"title":"Notify network","isCompleted":false},{"title":"Launch!","isCompleted":false}]},{"title":"Share on Show HN","description":"","status":"","subtasks":[{"title":"Draft out HN post","isCompleted":false},{"title":"Get feedback and refine","isCompleted":false},{"title":"Publish post","isCompleted":false}]},{"title":"Write launch article to publish on multiple channels","description":"","status":"","subtasks":[{"title":"Write article","isCompleted":false},{"title":"Publish on LinkedIn","isCompleted":false},{"title":"Publish on Inndie Hackers","isCompleted":false},{"title":"Publish on Medium","isCompleted":false}]}]},{"name":"Doing","tasks":[]},{"name":"Done","tasks":[]}]},{"name":"Roadmap","columns":[{"name":"Now","tasks":[{"title":"Launch version one","description":"","status":"","subtasks":[{"title":"Launch privately to our waitlist","isCompleted":false},{"title":"Launch publicly on PH, HN, etc.","isCompleted":false}]},{"title":"Review early feedback and plan next steps for roadmap","description":"Beyond the initial launch, we\'re keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.","status":"","subtasks":[{"title":"Interview 10 customers","isCompleted":false},{"title":"Review common customer pain points and suggestions","isCompleted":false},{"title":"Outline next steps for our roadmap","isCompleted":false}]}]},{"name":"Next","tasks":[]},{"name":"Later","tasks":[]}]}]}');
+const data_namespaceObject = JSON.parse('{"t":[{"name":"Platform Launch","columns":[{"name":"Todo","tasks":[{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for search","description":"","status":"Todo","subtasks":[{"title":"Search page","isCompleted":false}]},{"title":"Build settings UI","description":"","status":"Todo","subtasks":[{"title":"Account page","isCompleted":false},{"title":"Billing page","isCompleted":false}]},{"title":"QA and test all major user journeys","description":"Once we feel version one is ready, we need to rigorously test it both internally and externally to identify any major gaps.","status":"Todo","subtasks":[{"title":"Internal testing","isCompleted":false},{"title":"External testing","isCompleted":false}]}]},{"name":"Doing","tasks":[{"title":"Design settings and search pages","description":"","status":"Doing","subtasks":[{"title":"Settings - Account page","isCompleted":true},{"title":"Settings - Billing page","isCompleted":true},{"title":"Search page","isCompleted":false}]},{"title":"Add account management endpoints","description":"","status":"Doing","subtasks":[{"title":"Upgrade plan","isCompleted":true},{"title":"Cancel plan","isCompleted":true},{"title":"Update payment method","isCompleted":false}]},{"title":"Design onboarding flow","description":"","status":"Doing","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Add search enpoints","description":"","status":"Doing","subtasks":[{"title":"Add search endpoint","isCompleted":true},{"title":"Define search filters","isCompleted":false}]},{"title":"Add authentication endpoints","description":"","status":"Doing","subtasks":[{"title":"Define user model","isCompleted":true},{"title":"Add auth endpoints","isCompleted":false}]},{"title":"Research pricing points of various competitors and trial different business models","description":"We know what we\'re planning to build for version one. Now we need to finalise the first pricing model we\'ll use. Keep iterating the subtasks until we have a coherent proposition.","status":"Doing","subtasks":[{"title":"Research competitor pricing and business models","isCompleted":true},{"title":"Outline a business model that works for our solution","isCompleted":false},{"title":"Talk to potential customers about our proposed solution and ask for fair price expectancy","isCompleted":false}]}]},{"name":"Done","tasks":[{"title":"Conduct 5 wireframe tests","description":"Ensure the layout continues to make sense and we have strong buy-in from potential users.","status":"Done","subtasks":[{"title":"Complete 5 wireframe prototype tests","isCompleted":true}]},{"title":"Create wireframe prototype","description":"Create a greyscale clickable wireframe prototype to test our asssumptions so far.","status":"Done","subtasks":[{"title":"Create clickable wireframe prototype in Balsamiq","isCompleted":true}]},{"title":"Review results of usability tests and iterate","description":"Keep iterating through the subtasks until we\'re clear on the core concepts for the app.","status":"Done","subtasks":[{"title":"Meet to review notes from previous tests and plan changes","isCompleted":true},{"title":"Make changes to paper prototypes","isCompleted":true},{"title":"Conduct 5 usability tests","isCompleted":true}]},{"title":"Create paper prototypes and conduct 10 usability tests with potential customers","description":"","status":"Done","subtasks":[{"title":"Create paper prototypes for version one","isCompleted":true},{"title":"Complete 10 usability tests","isCompleted":true}]},{"title":"Market discovery","description":"We need to define and refine our core product. Interviews will help us learn common pain points and help us define the strongest MVP.","status":"Done","subtasks":[{"title":"Interview 10 prospective customers","isCompleted":true}]},{"title":"Competitor analysis","description":"","status":"Done","subtasks":[{"title":"Find direct and indirect competitors","isCompleted":true},{"title":"SWOT analysis for each competitor","isCompleted":true}]},{"title":"Research the market","description":"We need to get a solid overview of the market to ensure we have up-to-date estimates of market size and demand.","status":"Done","subtasks":[{"title":"Write up research analysis","isCompleted":true},{"title":"Calculate TAM","isCompleted":true}]}]}]},{"name":"Marketing Plan","columns":[{"name":"Todo","tasks":[{"title":"Plan Product Hunt launch","description":"","status":"Todo","subtasks":[{"title":"Find hunter","isCompleted":false},{"title":"Gather assets","isCompleted":false},{"title":"Draft product page","isCompleted":false},{"title":"Notify customers","isCompleted":false},{"title":"Notify network","isCompleted":false},{"title":"Launch!","isCompleted":false}]},{"title":"Share on Show HN","description":"","status":"","subtasks":[{"title":"Draft out HN post","isCompleted":false},{"title":"Get feedback and refine","isCompleted":false},{"title":"Publish post","isCompleted":false}]},{"title":"Write launch article to publish on multiple channels","description":"","status":"","subtasks":[{"title":"Write article","isCompleted":false},{"title":"Publish on LinkedIn","isCompleted":false},{"title":"Publish on Inndie Hackers","isCompleted":false},{"title":"Publish on Medium","isCompleted":false}]}]},{"name":"Doing","tasks":[]},{"name":"Done","tasks":[]}]},{"name":"Roadmap","columns":[{"name":"Now","tasks":[{"title":"Launch version one","description":"","status":"","subtasks":[{"title":"Launch privately to our waitlist","isCompleted":false},{"title":"Launch publicly on PH, HN, etc.","isCompleted":false}]},{"title":"Review early feedback and plan next steps for roadmap","description":"Beyond the initial launch, we\'re keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.","status":"","subtasks":[{"title":"Interview 10 customers","isCompleted":false},{"title":"Review common customer pain points and suggestions","isCompleted":false},{"title":"Outline next steps for our roadmap","isCompleted":false}]}]},{"name":"Next","tasks":[]},{"name":"Later","tasks":[]}]},{"name":"empty"}]}');
 // EXTERNAL MODULE: ./node_modules/external-svg-loader/dist/svg-loader.min.js
 var svg_loader_min = __webpack_require__(693);
 ;// CONCATENATED MODULE: ./src/assets/images/icons/logo-mobile.svg
@@ -37,7 +37,13 @@ function logo() {
   return "<svg data-src=".concat(logoType[0], " class=\"logo\" id=\"logo\" data-logo=\"").concat(logoType[1], "\"/>");
 }
 function topBar(boardsData) {
-  return "\n    <div class=\"top-bar\" id=\"top-bar\">\n      <div class=\"logo-container\" id=\"logo-container\"></div>\n      <div class=\"board-title\" id=\"board-title\">\n        <h1 class=\"board-title-title\">".concat(boardsData[0].name, "</h1>\n      </div>\n      <div class=\"board-controls\">\n        <button class=\"add-new-task-btn\" id=\"add-new-task-btn\">\n          <svg data-src=").concat(icon_add_task_mobile_namespaceObject, " class=\"add-new-task-icon\"/>\n          <h2 class=\"add-new-task-paragraph\">Add New Task</h2>\n        </button>\n        <button class=\"board-options\" id=\"board-options\">\n          <svg data-src=").concat(icon_vertical_ellipsis_namespaceObject, " class=\"board-options-icon\"/>\n        </button>\n      </div>\n    </div> \n  ");
+  if (boardsData[0] === undefined) {
+    console.log(boardsData);
+    boardsData[0] = {
+      name: 'NO BOARDS'
+    };
+  }
+  return "\n    <div class=\"top-bar\" id=\"top-bar\">\n      <div class=\"logo-container\" id=\"logo-container\"></div>\n      <div class=\"board-title\" id=\"board-title\">\n        <h1 class=\"board-title-title\" id=\"board-title-heading\">No Board Selected</h1>\n      </div>\n      <div class=\"board-controls\">\n        <button class=\"add-new-task-btn primary-btn-L\" id=\"add-new-task-btn\" data-has-tasks=\"false\">\n          <svg data-src=".concat(icon_add_task_mobile_namespaceObject, " class=\"add-new-task-icon\"/>\n          <h2 class=\"add-new-task-heading\">Add New Task</h2>\n        </button>\n        <button class=\"board-options\" id=\"board-options\">\n          <svg data-src=").concat(icon_vertical_ellipsis_namespaceObject, " class=\"board-options-icon\"/>\n        </button>\n      </div>\n    </div> \n  ");
 }
 ;// CONCATENATED MODULE: ./src/utils/themeMode.js
 function setThemeMode() {
@@ -92,7 +98,7 @@ function loadSideBarToggleIcon() {
     } else {
       if (localStorage.sideBar === 'open') {
         result[0] = icon_hide_sidebar_namespaceObject;
-        result[1] = 'Hide Sidebar';
+        result[1] = '<h3>Hide Sidebar</h3>';
       } else {
         result[0] = icon_show_sidebar_namespaceObject;
       }
@@ -105,14 +111,22 @@ function sideBarToggle() {
 }
 function loadBoards(boardsData) {
   var boardButtons = boardsData.map(function (board) {
-    return "\n    <button class=\"side-bar-board\">\n      <svg data-src=".concat(icon_board_namespaceObject, " class=\"side-bar-board-icon\"/>\n      <h2 class=\"side-bar-board-name\">").concat(board.name, "</h2>\n    </button>  \n  ");
+    return "\n    <button class=\"side-bar-board\" data-board-active=\"false\">\n        <svg data-src=".concat(icon_board_namespaceObject, " class=\"side-bar-board-icon\"/>\n        <h3 class=\"side-bar-board-name\">").concat(board.name, "</h3>\n      </button>\n  ");
   });
   return boardButtons.join('');
 }
 function sideBar(boardsData) {
-  return "\n    <div class=\"side-bar\" id=\"side-bar\" data-side-bar-toggle=\"".concat(localStorage.sideBar, "\">\n      <div class=\"side-bar-boards\">\n        <h3 class=\"side-bar-heading\">all boards (").concat(boardsData.length, ")</h3>\n        ").concat(loadBoards(boardsData), "\n        <button class=\"side-bar-new-board\">\n          <svg data-src=").concat(icon_board_namespaceObject, " class=\"side-bar-new-board-icon\"/>\n          <h2 class=\"side-bar-new-board-heading\">+ Create New Board</h2>\n        </button>\n      </div>\n      <div class=\"side-bar-theme-mode\" id=\"side-bar-theme-mode\" data-theme-mode=\"").concat(localStorage.theme, "\">\n        <svg data-src=").concat(icon_light_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n        <div class=\"side-bar-theme-mode-toggle\">\n          <button class=\"side-bar-theme-mode-btn\"></button>\n        </div>\n        <svg data-src=").concat(icon_dark_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n      </div>\n    </div>\n  ");
+  return "\n    <div \n      class=\"side-bar\"\n      id=\"side-bar\" \n      data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"\n    >\n      <div class=\"side-bar-boards\" id=\"side-bar-boards\">\n        <h4 class=\"side-bar-heading\">all boards (").concat(boardsData.length, ")</h4>\n        ").concat(loadBoards(boardsData), "\n        <button class=\"side-bar-new-board\" id=\"create-new-board-btn\">\n          <svg data-src=").concat(icon_board_namespaceObject, " class=\"side-bar-new-board-icon\"/>\n          <h3 class=\"side-bar-new-board-heading\">+ Create New Board</h3>\n        </button>\n      </div>\n      <div class=\"side-bar-theme-mode\" id=\"side-bar-theme-mode\" \n        data-theme-mode=\"").concat(localStorage.theme, "\">\n        <svg data-src=").concat(icon_light_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n        <div class=\"side-bar-theme-mode-toggle\" id=\"side-bar-theme-mode-toggle\">\n          <button class=\"side-bar-theme-mode-btn\"></button>\n        </div>\n        <svg data-src=").concat(icon_dark_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n      </div>\n    </div>\n  ");
+}
+;// CONCATENATED MODULE: ./src/components/taskBar.js
+function emptyBoard() {
+  return "\n    <div class=\"task-bar-empty-board\" id=\"task-empty-board\">\n      <h2 class=\"task-bar-heading\">This board is empty. Create a new column to get started.</h2>\n      <button class=\"primary-btn-L\" id=\"task-bar-add-new-columns\">+ Add New Column</button>\n    </div>\n  ";
+}
+function taskBar() {
+  return "\n    <div class=\"task-bar\" id=\"task-bar\" data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"></div>  \n  ");
 }
 ;// CONCATENATED MODULE: ./src/utils/loadLayout.js
+
 
 
 
@@ -126,7 +140,8 @@ var htmlElements = {
   sideBarToggleContainer: null,
   sideBarToggleIcon: null,
   boardTitle: null,
-  themeModeToggle: null
+  themeModeToggle: null,
+  taskBar: null
 };
 function setSidebarHeight() {
   setTimeout(function () {
@@ -134,7 +149,7 @@ function setSidebarHeight() {
     var topBarHeight = htmlElements.topBar.offsetHeight;
     var sideBarHeight = appContainerHeight - topBarHeight;
     htmlElements.sideBar.style.height = "".concat(sideBarHeight, "px");
-  }, 300);
+  }, 500);
 }
 function loadLogo() {
   if (htmlElements.logo !== null) {
@@ -150,7 +165,9 @@ function getHtmlElements() {
   htmlElements.sideBarToggleBtn = document.querySelector('#side-bar-toggle-btn');
   htmlElements.sideBarToggleContainer = document.querySelector('#side-bar-toggle-container');
   htmlElements.boardTitle = document.querySelector('#board-title');
-  htmlElements.themeModeToggle = htmlElements.sideBar.querySelector('#side-bar-theme-mode');
+  htmlElements.themeModeToggle = htmlElements.sideBar.querySelector('#side-bar-theme-mode-toggle');
+  htmlElements.themeModeContainer = htmlElements.sideBar.querySelector('#side-bar-theme-mode');
+  htmlElements.taskBar = document.querySelector('#task-bar');
 }
 function reloadSideBarToggleIcon() {
   htmlElements.sideBarToggleBtn.insertAdjacentHTML('afterbegin', loadSideBarToggleIcon());
@@ -158,22 +175,27 @@ function reloadSideBarToggleIcon() {
 function updateSideBarState(state) {
   htmlElements.sideBar.dataset.sideBarToggle = state;
   htmlElements.sideBarToggleContainer.dataset.sideBarToggle = state;
+  htmlElements.taskBar.dataset.sideBarToggle = state;
+  htmlElements.app.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
-  reloadSideBarToggleIcon();
+  // reloadSideBarToggleIcon();
 }
+
 function toggleSideBar() {
   htmlElements.sideBarToggleIcon = document.querySelector('#side-bar-toggle-icon');
   htmlElements.sideBarToggleIcon.remove();
   htmlElements.sideBarToggleBtn.innerText = '';
   if (localStorage.sideBar === 'open') {
     updateSideBarState('hidden');
+    reloadSideBarToggleIcon();
   } else {
     updateSideBarState('open');
+    reloadSideBarToggleIcon();
   }
 }
 function activateEventListeners() {
   htmlElements.themeModeToggle.addEventListener('click', function () {
-    toggleThemeMode(htmlElements.themeModeToggle);
+    toggleThemeMode(htmlElements.themeModeContainer);
     loadLogo();
   });
 }
@@ -200,11 +222,13 @@ function loadSideBarToggle() {
 function loadLayout(boardsData) {
   setThemeMode();
   htmlElements.app = document.querySelector('#app');
+  htmlElements.app.insertAdjacentHTML('afterbegin', taskBar());
   htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
   htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
   getHtmlElements();
   loadLogo();
   loadSideBarToggle();
+  updateSideBarState(localStorage.sideBar);
   reloadEventListeners();
   activateEventListeners();
 }
@@ -220,13 +244,92 @@ function loadOnScreenResize() {
   }
 }
 window.addEventListener('resize', loadOnScreenResize);
+;// CONCATENATED MODULE: ./src/utils/boardHandler.js
+
+var boardHandler_htmlElements = {
+  sideBarBoards: null,
+  activeBoard: null,
+  addNewTaskButton: null,
+  taskBar: null,
+  boardTitleHeading: null
+};
+var boards = null;
+function createNewBoard() {
+  var newBoard = {
+    title: 'New Boards',
+    description: '',
+    status: 'Todo',
+    subtasks: [{
+      title: 'Account page',
+      isCompleted: false
+    }, {
+      title: 'Billing page',
+      isCompleted: false
+    }]
+  };
+  console.log(newBoard);
+}
+function updateAddNewTaskButton(buttonState) {
+  boardHandler_htmlElements.addNewTaskButton.dataset.hasTasks = buttonState;
+}
+function loadEmptyTaskBar() {
+  updateAddNewTaskButton(false);
+  boardHandler_htmlElements.appContainer.insertAdjacentHTML('beforeend', emptyBoard());
+}
+function loadTasks(boardData) {
+  updateAddNewTaskButton(true);
+}
+function checkIfTasksExist() {
+  var activeBoard = boardHandler_htmlElements.activeBoard.innerText;
+  boards.forEach(function (board) {
+    if ((board === null || board === void 0 ? void 0 : board.name) == activeBoard) {
+      (board === null || board === void 0 ? void 0 : board.columns) != undefined ? loadTasks(board) : loadEmptyTaskBar();
+    }
+  });
+}
+function updateBoardState(currentTarget) {
+  boardHandler_htmlElements.sideBarBoards.forEach(function (board) {
+    if (board.classList.contains('side-bar-board') && board.dataset.boardActive == 'true') {
+      board.dataset.boardActive = false;
+    }
+  });
+  currentTarget.dataset.boardActive = true;
+  boardHandler_htmlElements.activeBoard = currentTarget;
+  boardHandler_htmlElements.boardTitleHeading.innerText = boardHandler_htmlElements.activeBoard.innerText;
+  checkIfTasksExist();
+}
+function processInteractionOnBoards(e) {
+  if (e.currentTarget.id === 'create-new-board-btn') {
+    createNewBoard();
+  } else {
+    updateBoardState(e.currentTarget);
+  }
+}
+function boardHandler_activateEventListeners() {
+  boardHandler_htmlElements.sideBarBoards.forEach(function (button) {
+    button.addEventListener('click', processInteractionOnBoards);
+  });
+}
+function boardHandler_getHtmlElements() {
+  boardHandler_htmlElements.sideBarBoards = document.querySelector('#side-bar-boards').querySelectorAll('button');
+  boardHandler_htmlElements.addNewTaskButton = document.querySelector('#add-new-task-btn');
+  boardHandler_htmlElements.appContainer = document.querySelector('#task-bar');
+  boardHandler_htmlElements.boardTitleHeading = document.querySelector('#board-title-heading');
+}
+function handleBoards(boardsData) {
+  boards = boardsData;
+  boardHandler_getHtmlElements();
+  boardHandler_activateEventListeners();
+}
 ;// CONCATENATED MODULE: ./src/App.js
+
 
 
 
 
 function loadApp() {
   loadLayout(data_namespaceObject.t);
+  handleBoards(data_namespaceObject.t);
 }
 window.addEventListener('load', loadApp);
 
@@ -243,7 +346,7 @@ window.addEventListener('load', loadApp);
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__(439));
+/******/ var __webpack_exports__ = (__webpack_exec__(101));
 /******/ }
 ]);
-//# sourceMappingURL=bundle89d9d0bd8e2059f49f37.js.map
+//# sourceMappingURL=bundle7e0ad22feaf23c3acf27.js.map

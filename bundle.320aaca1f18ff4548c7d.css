@@ -1,0 +1,253 @@
+@font-face{font-family:PlusJakartaSans-Bold;src:url(assets/fonts/PlusJakartaSans-Bold.ttf) format("ttf")}@font-face{font-family:PlusJakartaSans-BoldItalic;src:url(assets/fonts/PlusJakartaSans-BoldItalic.ttf) format("ttf")}@font-face{font-family:PlusJakartaSans-Medium;src:url(assets/fonts/PlusJakartaSans-Medium.ttf) format("ttf")}@font-face{font-family:PlusJakartaSans-MediumItalic;src:url(assets/fonts/PlusJakartaSans-MediumItalic.ttf) format("ttf")}.top-bar{grid-column:1 / -1;display:flex;width:100%;align-items:center;--tw-bg-opacity:1;background-color:rgba(255, 255, 255, 1);background-color:rgba(255, 255, 255, var(--tw-bg-opacity));transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms;transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.dark .top-bar{--tw-bg-opacity:1;background-color:rgba(43, 44, 55, 1);background-color:rgba(43, 44, 55, var(--tw-bg-opacity))}.top-bar .logo-container{padding-top:1.25rem;padding-bottom:1.25rem;padding-left:1rem}.top-bar .logo-container .logo{width:1.5rem}.top-bar .board-title{display:flex;align-items:center;padding-left:1rem}.top-bar .board-title .side-bar-toggle-container .side-bar-toggle-btn{padding-left:1.25rem;padding-right:1.25rem;padding-top:1.25rem;padding-bottom:1.25rem;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms;transition-timing-function:linear}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.top-bar .board-title .side-bar-toggle-container .side-bar-toggle-btn:hover{animation:bounce 1s infinite}.top-bar .board-title .side-bar-toggle-container[data-side-bar-toggle=hidden]{--tw-rotate:90deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(90deg) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.top-bar .board-controls{display:flex;flex-grow:1;align-items:center;justify-content:flex-end;gap:1rem;padding-top:1.25rem;padding-bottom:1.25rem}.top-bar .board-controls .add-new-task-btn{display:flex;align-items:center;opacity:0.25}.top-bar .board-controls .add-new-task-btn .add-new-task-icon{height:0.75rem;fill:#fff}.top-bar .board-controls .add-new-task-btn .add-new-task-heading{display:none}.top-bar .board-controls .add-new-task-btn[data-has-tasks=true]{opacity:1}.top-bar .board-controls .board-options{display:flex;align-items:center;justify-content:center;padding:1rem;padding-right:2.25rem}.top-bar .board-controls .board-options .board-options-icon{height:1rem;fill:#828FA3}@media (min-width: 700px){.top-bar .logo-container{width:83.333333%;max-width:20rem;border-right-width:1px;--tw-border-opacity:1;border-right-color:rgba(228, 235, 250, 1);border-right-color:rgba(228, 235, 250, var(--tw-border-opacity));padding-top:2rem;padding-bottom:2rem;padding-left:2.25rem}.dark .top-bar .logo-container{--tw-border-opacity:1;border-right-color:rgba(62, 63, 78, 1);border-right-color:rgba(62, 63, 78, var(--tw-border-opacity))}.top-bar .logo-container .logo{width:9rem}.top-bar .board-title{padding-top:1.75rem;padding-bottom:1.75rem;padding-left:1.5rem}.top-bar .board-controls .add-new-task-btn .add-new-task-icon{margin-right:0.5rem}}@media (min-width: 820px){.top-bar .board-controls .add-new-task-btn .add-new-task-heading{display:block;--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}}.side-bar{position:absolute;top:13%;left:8%;display:flex;width:83.333333%;max-width:20rem;flex-direction:column;border-radius:0.5rem;--tw-bg-opacity:1;background-color:rgba(255, 255, 255, 1);background-color:rgba(255, 255, 255, var(--tw-bg-opacity));text-transform:uppercase;letter-spacing:0.1em;--tw-text-opacity:1;color:rgba(130, 143, 163, 1);color:rgba(130, 143, 163, var(--tw-text-opacity));transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms;transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.dark .side-bar{--tw-bg-opacity:1;background-color:rgba(43, 44, 55, 1);background-color:rgba(43, 44, 55, var(--tw-bg-opacity))}.side-bar .side-bar-boards .side-bar-heading{padding-top:0.75rem;padding-bottom:0.75rem;padding-left:1.5rem;padding-right:1.5rem}.side-bar .side-bar-boards .side-bar-board{margin-top:0.25rem;margin-bottom:0.25rem;display:flex;width:91.666667%;align-items:center}.side-bar .side-bar-boards .side-bar-board > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgba(233, 213, 255, 1);border-color:rgba(233, 213, 255, var(--tw-divide-opacity))}.side-bar .side-bar-boards .side-bar-board{border-top-right-radius:9999px;border-bottom-right-radius:9999px;padding-top:0.5rem;padding-bottom:0.5rem;padding-left:1.5rem;padding-right:1.5rem;transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.side-bar .side-bar-boards .side-bar-board .side-bar-board-icon{margin-right:0.5rem;height:1rem;fill:#828FA3}.side-bar .side-bar-boards .side-bar-board[data-board-active=true]{--tw-bg-opacity:1;background-color:rgba(99, 95, 199, 1);background-color:rgba(99, 95, 199, var(--tw-bg-opacity));--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.side-bar .side-bar-boards .side-bar-board[data-board-active=true] .side-bar-board-icon{fill:#fff}.side-bar .side-bar-boards .side-bar-board:hover{--tw-bg-opacity:1;background-color:rgba(168, 164, 255, 1);background-color:rgba(168, 164, 255, var(--tw-bg-opacity));--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.side-bar .side-bar-boards .side-bar-board:hover .side-bar-board-icon{fill:#fff}.side-bar .side-bar-boards .side-bar-board:focus{--tw-bg-opacity:1;background-color:rgba(99, 95, 199, 1);background-color:rgba(99, 95, 199, var(--tw-bg-opacity));--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.side-bar .side-bar-boards .side-bar-board:focus .side-bar-board-icon{fill:#fff}.side-bar .side-bar-boards .side-bar-new-board{display:flex;width:100%;align-items:center;padding-top:0.5rem;padding-bottom:0.5rem;padding-left:1.5rem;padding-right:1.5rem;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;transition-timing-function:linear}.side-bar .side-bar-boards .side-bar-new-board .side-bar-new-board-icon{margin-right:0.5rem;height:1rem;fill:#635FC7}.side-bar .side-bar-boards .side-bar-new-board .side-bar-new-board-heading{--tw-text-opacity:1;color:rgba(99, 95, 199, 1);color:rgba(99, 95, 199, var(--tw-text-opacity))}.side-bar .side-bar-boards .side-bar-new-board:hover{--tw-bg-opacity:1;background-color:rgba(168, 164, 255, 1);background-color:rgba(168, 164, 255, var(--tw-bg-opacity))}.side-bar .side-bar-boards .side-bar-new-board:hover .side-bar-new-board-icon{fill:#fff}.side-bar .side-bar-boards .side-bar-new-board:hover .side-bar-new-board-heading{--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.side-bar .side-bar-theme-mode{margin-left:0.75rem;margin-right:0.75rem;margin-top:0.5rem;margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;--tw-bg-opacity:1;background-color:rgba(244, 247, 253, 1);background-color:rgba(244, 247, 253, var(--tw-bg-opacity));padding-top:0.75rem;padding-bottom:0.75rem}.dark .side-bar .side-bar-theme-mode{--tw-bg-opacity:1;background-color:rgba(32, 33, 44, 1);background-color:rgba(32, 33, 44, var(--tw-bg-opacity))}.side-bar .side-bar-theme-mode .side-bar-theme-mode-icon{height:1rem;fill:#828FA3}.side-bar .side-bar-theme-mode .side-bar-theme-mode-toggle{margin-left:1.5rem;margin-right:1.5rem;display:flex;height:1.5rem;width:2.5rem;align-items:center;border-radius:9999px;--tw-bg-opacity:1;background-color:rgba(99, 95, 199, 1);background-color:rgba(99, 95, 199, var(--tw-bg-opacity))}.side-bar .side-bar-theme-mode .side-bar-theme-mode-toggle .side-bar-theme-mode-btn{margin:0.25rem;height:0.75rem;width:0.75rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));border-radius:9999px;--tw-bg-opacity:1;background-color:rgba(255, 255, 255, 1);background-color:rgba(255, 255, 255, var(--tw-bg-opacity));transition-duration:500ms;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.side-bar .side-bar-theme-mode[data-theme-mode=dark] .side-bar-theme-mode-btn{--tw-translate-x:160%;transform:translate(160%, var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.side-bar[data-side-bar-toggle=hidden]{--tw-translate-x:-150%;transform:translate(-150%, var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 700px){.side-bar{position:static;grid-column-start:1;grid-column-end:2;width:100%;justify-content:space-between;border-radius:0px;border-right-width:1px;--tw-border-opacity:1;border-right-color:rgba(228, 235, 250, 1);border-right-color:rgba(228, 235, 250, var(--tw-border-opacity))}.dark .side-bar{--tw-border-opacity:1;border-right-color:rgba(62, 63, 78, 1);border-right-color:rgba(62, 63, 78, var(--tw-border-opacity))}.side-bar .side-bar-boards{flex-grow:1}.side-bar .side-bar-boards .side-bar-heading{padding-left:2.25rem}.side-bar .side-bar-boards .side-bar-board{padding-left:2.25rem}.side-bar .side-bar-boards .side-bar-new-board{padding-left:2.25rem}.side-bar .side-bar-toggle-container{left:100%;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms;transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.side-bar .side-bar-toggle-container .side-bar-toggle-btn{display:flex;align-items:center;padding:0.75rem}.side-bar .side-bar-toggle-container .side-bar-toggle-btn .side-bar-toggle-icon{margin-right:0.5rem}.side-bar .side-bar-toggle-container[data-side-bar-toggle=hidden]{position:absolute;top:95%;border-top-right-radius:9999px;border-bottom-right-radius:9999px;--tw-bg-opacity:1;background-color:rgba(99, 95, 199, 1);background-color:rgba(99, 95, 199, var(--tw-bg-opacity))}.side-bar[data-side-bar-toggle=hidden]{grid-row-start:2;--tw-translate-x:-100%;transform:translate(-100%, var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.side-bar[data-side-bar-toggle=hidden] .side-bar-theme-mode{margin-bottom:3.5rem}}.task-bar{grid-column-start:2;grid-column-end:3;display:flex;flex-grow:1;align-items:center;justify-content:center;text-align:center;transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:700ms;transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.task-bar[data-side-bar-toggle=hidden]{grid-column:1 / -1;grid-column-start:1;grid-row-start:2}.task-bar .task-bar-empty-board{display:flex;flex-direction:column;align-items:center;gap:1rem;padding-left:1rem;padding-right:1rem}.primary-btn-L{--tw-bg-opacity:1;background-color:rgba(99, 95, 199, 1);background-color:rgba(99, 95, 199, var(--tw-bg-opacity));padding-top:0.75rem;padding-bottom:0.75rem;padding-left:1.5rem;padding-right:1.5rem;--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.primary-btn-L:hover{--tw-bg-opacity:1;background-color:rgba(168, 164, 255, 1);background-color:rgba(168, 164, 255, var(--tw-bg-opacity))}.primary-btn-S{padding-top:1.25rem;padding-bottom:1.25rem;padding-left:1.5rem;padding-right:1.5rem;font-weight:700;--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.primary-btn-S:hover{--tw-bg-opacity:1;background-color:rgba(168, 164, 255, 1);background-color:rgba(168, 164, 255, var(--tw-bg-opacity))}.secondary-btn{--tw-bg-opacity:1;background-color:rgba(99, 95, 199, 1);background-color:rgba(99, 95, 199, var(--tw-bg-opacity));padding-top:1.25rem;padding-bottom:1.25rem;padding-left:1.5rem;padding-right:1.5rem;--tw-text-opacity:1;color:rgba(99, 95, 199, 1);color:rgba(99, 95, 199, var(--tw-text-opacity));opacity:0.1}.secondary-btn:hover{--tw-bg-opacity:1;background-color:rgba(99, 95, 199, 1);background-color:rgba(99, 95, 199, var(--tw-bg-opacity));opacity:0.25}.destructive-btn{--tw-bg-opacity:1;background-color:rgba(234, 85, 85, 1);background-color:rgba(234, 85, 85, var(--tw-bg-opacity));padding-top:1.25rem;padding-bottom:1.25rem;padding-left:1.5rem;padding-right:1.5rem;font-weight:700;--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.destructive-btn:hover{--tw-bg-opacity:1;background-color:rgba(255, 152, 152, 1);background-color:rgba(255, 152, 152, var(--tw-bg-opacity))}.primary-btn-L,.primary-btn-S,.secondary-btn,.destructive-btn{width:-moz-fit-content;width:fit-content;border-radius:9999px;font-weight:700;transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:200ms;transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}/*
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}::before,
+::after {
+  --tw-content: '';
+}/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+}/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/abbr:where([title]) {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}/*
+Remove the default font size and weight for headings.
+*/h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/a {
+  color: inherit;
+  text-decoration: inherit;
+}/*
+Add the correct font weight in Edge and Safari.
+*/b,
+strong {
+  font-weight: bolder;
+}/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}/*
+Add the correct font size in all browsers.
+*/small {
+  font-size: 80%;
+}/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}sub {
+  bottom: -0.25em;
+}sup {
+  top: -0.5em;
+}/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/button,
+select {
+  text-transform: none;
+}/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}/*
+Use the modern Firefox focus style for all focusable elements.
+*/:-moz-focusring {
+  outline: auto;
+}/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/:-moz-ui-invalid {
+  box-shadow: none;
+}/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/progress {
+  vertical-align: baseline;
+}/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/::-webkit-search-decoration {
+  -webkit-appearance: none;
+}/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}/*
+Add the correct display in Chrome and Safari.
+*/summary {
+  display: list-item;
+}/*
+Removes the default spacing and border for appropriate elements.
+*/blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}fieldset {
+  margin: 0;
+  padding: 0;
+}legend {
+  padding: 0;
+}ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}/*
+Reset default styling for dialogs.
+*/dialog {
+  padding: 0;
+}/*
+Prevent resizing textareas horizontally by default.
+*/textarea {
+  resize: vertical;
+}/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}/*
+Set the default cursor for buttons.
+*/button,
+[role="button"] {
+  cursor: pointer;
+}/*
+Make sure disabled buttons don't get the pointer cursor.
+*/:disabled {
+  cursor: default;
+}/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/img,
+video {
+  max-width: 100%;
+  height: auto;
+}/* Make elements with the HTML hidden attribute stay hidden by default */[hidden] {
+  display: none;
+}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, 0.5);--tw-ring-offset-shadow:0 0 rgba(0,0,0,0);--tw-ring-shadow:0 0 rgba(0,0,0,0);--tw-shadow:0 0 rgba(0,0,0,0);--tw-shadow-colored:0 0 rgba(0,0,0,0);--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, 0.5);--tw-ring-offset-shadow:0 0 rgba(0,0,0,0);--tw-ring-shadow:0 0 rgba(0,0,0,0);--tw-shadow:0 0 rgba(0,0,0,0);--tw-shadow-colored:0 0 rgba(0,0,0,0);--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }h1{font-size:1.125rem;font-weight:700;line-height:2rem}h2{font-size:1.125rem;font-weight:700;line-height:1.5rem}h3{font-size:1rem;font-weight:700;line-height:1.25rem}h4{font-size:0.75rem;font-weight:700;line-height:1rem}.app-container{display:flex;height:100vh;width:100%;flex-direction:column;--tw-bg-opacity:1;background-color:rgba(244, 247, 253, 1);background-color:rgba(244, 247, 253, var(--tw-bg-opacity));font-family:PlusJakartaSans, sans;--tw-text-opacity:1;color:rgba(0, 1, 18, 1);color:rgba(0, 1, 18, var(--tw-text-opacity));transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms;transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.dark .app-container{--tw-bg-opacity:1;background-color:rgba(32, 33, 44, 1);background-color:rgba(32, 33, 44, var(--tw-bg-opacity));--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}@media (min-width: 700px){h1{font-size:1.5rem;line-height:2rem}.app-container{position:relative;display:grid;height:100vh;width:100%;flex:none;grid-auto-flow:row;grid-auto-rows:min-content;--tw-bg-opacity:1;background-color:rgba(244, 247, 253, 1);background-color:rgba(244, 247, 253, var(--tw-bg-opacity));font-family:PlusJakartaSans, sans;--tw-text-opacity:1;color:rgba(0, 1, 18, 1);color:rgba(0, 1, 18, var(--tw-text-opacity));transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms;transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.dark .app-container{--tw-bg-opacity:1;background-color:rgba(32, 33, 44, 1);background-color:rgba(32, 33, 44, var(--tw-bg-opacity));--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}.app-container{grid-template-columns:minmax(320px, 320px) minmax(0px, 1fr)}.app-container[data-side-bar-toggle=hidden]{justify-items:center}}
+
+/*# sourceMappingURL=bundle.320aaca1f18ff4548c7d.css.map*/
