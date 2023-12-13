@@ -21,11 +21,18 @@ const htmlElements = {
   taskBar: null,
 };
 
-function loadLogo() {
+const appState = {
+  mobile: null,
+};
+
+function loadLogo(isScreenMobile) {
   if (htmlElements.logo !== null) {
     htmlElements.logo.remove();
   }
-  htmlElements.logoContainer.insertAdjacentHTML('afterbegin', logo());
+  htmlElements.logoContainer.insertAdjacentHTML(
+    'afterbegin',
+    logo(isScreenMobile)
+  );
   htmlElements.logo = document.querySelector('#logo');
 }
 
@@ -52,7 +59,7 @@ function getHtmlElements() {
 function reloadSideBarToggleIcon() {
   htmlElements.sideBarToggleBtn.insertAdjacentHTML(
     'afterbegin',
-    loadSideBarToggleIcon()
+    loadSideBarToggleIcon(appState.mobile)
   );
 }
 
@@ -73,7 +80,7 @@ function toggleSideBar() {
   htmlElements.sideBarToggleBtn.innerText = '';
   if (localStorage.sideBar === 'open') {
     updateSideBarState('hidden');
-    reloadSideBarToggleIcon();
+    reloadSideBarToggleIcon(appState.mobile);
   } else {
     updateSideBarState('open');
     reloadSideBarToggleIcon();
@@ -97,11 +104,17 @@ function loadSideBarToggle() {
     htmlElements.sideBarToggleContainer.remove();
   }
   function insertToggle() {
-    if (window.innerWidth < 700) {
+    if (appState.mobile) {
       htmlElements.sideBar.style.height = null;
-      htmlElements.boardTitle.insertAdjacentHTML('beforeend', sideBarToggle());
-    } else if (window.innerWidth > 700) {
-      htmlElements.sideBar.insertAdjacentHTML('beforeend', sideBarToggle());
+      htmlElements.boardTitle.insertAdjacentHTML(
+        'beforeend',
+        sideBarToggle(appState.mobile)
+      );
+    } else if (!appState.mobile) {
+      htmlElements.sideBar.insertAdjacentHTML(
+        'beforeend',
+        sideBarToggle(appState.mobile)
+      );
     }
   }
   insertToggle();
@@ -113,28 +126,36 @@ function loadSideBarToggle() {
 export function loadLayout(boardsData) {
   setThemeMode();
   htmlElements.app = document.querySelector('#app');
+  if (htmlElements.app.clientWidth < 700) {
+    appState.mobile = true;
+  }
   htmlElements.app.insertAdjacentHTML('afterbegin', taskBar());
   htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
   htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
   getHtmlElements();
-  loadLogo();
+  loadLogo(appState.mobile);
   loadSideBarToggle();
-  updateSideBarState(localStorage.sideBar);
   reloadEventListeners();
   activateEventListeners();
+  updateSideBarState(localStorage.sideBar);
 }
 
 function loadOnScreenResize() {
-  if (window.innerWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
-    loadLogo();
-    loadSideBarToggle();
+  if (
+    htmlElements.app.clientWidth < 700 &&
+    htmlElements.logo.dataset.logo !== 'mobile'
+  ) {
+    appState.mobile = true;
+    loadLogo(appState.mobile);
+    loadSideBarToggle(appState.mobile);
     reloadEventListeners();
   } else if (
-    window.innerWidth > 700 &&
+    htmlElements.app.clientWidth > 700 &&
     htmlElements.logo.dataset.logo === 'mobile'
   ) {
-    loadLogo();
-    loadSideBarToggle();
+    appState.mobile = false;
+    loadLogo(appState.mobile);
+    loadSideBarToggle(appState.mobile);
     reloadEventListeners();
   }
 }

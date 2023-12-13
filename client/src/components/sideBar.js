@@ -5,34 +5,29 @@ import chevron from 'Icons/icon-chevron-down.svg';
 import hideSideBar from 'Icons/icon-hide-sidebar.svg';
 import showSideBar from 'Icons/icon-show-sidebar.svg';
 
-export function loadSideBarToggleIcon() {
+export function loadSideBarToggleIcon(isScreenMobile) {
   let result = ['', ''];
-  if (!('sideBar' in localStorage)) {
-    localStorage.sideBar = 'open';
-    loadSideBarToggleIcon();
+  if (isScreenMobile) {
+    result[0] = chevron;
   } else {
-    if (window.innerWidth < 700) {
-      result[0] = chevron;
+    if (localStorage.sideBar === 'open') {
+      result[0] = hideSideBar;
+      result[1] = '<h3>Hide Sidebar</h3>';
     } else {
-      if (localStorage.sideBar === 'open') {
-        result[0] = hideSideBar;
-        result[1] = '<h3>Hide Sidebar</h3>';
-      } else {
-        result[0] = showSideBar;
-      }
+      result[0] = showSideBar;
     }
   }
   return `<svg data-src=${result[0]} class="side-bar-toggle-icon" id="side-bar-toggle-icon"/> ${result[1]}`;
 }
 
-export function sideBarToggle() {
+export function sideBarToggle(isScreenMobile) {
   return `
     <div class="side-bar-toggle-container" 
       id="side-bar-toggle-container" 
       data-side-bar-toggle="${localStorage.sideBar}"
     >
       <button class="side-bar-toggle-btn" id="side-bar-toggle-btn">
-        ${loadSideBarToggleIcon()}
+        ${loadSideBarToggleIcon(isScreenMobile)}
       </button>
     </div>
   `;

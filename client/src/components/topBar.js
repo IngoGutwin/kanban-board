@@ -4,8 +4,8 @@ import logoLight from 'Icons/logo-light.svg';
 import addTask from 'Icons/icon-add-task-mobile.svg';
 import ellipsis from 'Icons/icon-vertical-ellipsis.svg';
 
-function getLogoType() {
-  if (window.innerWidth < 700) {
+function getLogoType(isScreenMobile) {
+  if (isScreenMobile) {
     return [logoMobile, 'mobile'];
   } else {
     return [
@@ -15,8 +15,8 @@ function getLogoType() {
   }
 }
 
-export function logo() {
-  const logoType = getLogoType();
+export function logo(isScreenMobile) {
+  const logoType = getLogoType(isScreenMobile);
   return `<svg data-src=${logoType[0]} class="logo" id="logo" data-logo="${logoType[1]}"/>`;
 }
 
