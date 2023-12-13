@@ -123,7 +123,7 @@
       }
     }
     &[data-side-bar-toggle='hidden'] {
-      @apply translate-x-[-100%];
+      @apply translate-x-[-100%] row-start-2;
 
       .side-bar-theme-mode {
         @apply mb-14;

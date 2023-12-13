@@ -1,3 +1,7 @@
-.task-bar-empty-board {
-  @apply flex flex-grow justify-center items-center col-start-2 col-end-3;
+.task-bar {
+  @apply flex flex-grow justify-center items-center col-start-2 col-end-3 transition-transform ease-out duration-700;
+
+  &[data-side-bar-toggle='hidden'] {
+    @apply col-start-1 col-span-full row-start-2;
+  }
 }
