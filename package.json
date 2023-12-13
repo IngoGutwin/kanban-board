@@ -12,7 +12,7 @@
     "deploy": "npm run build --prefix client && npm run clean-public-folder",
     "clean-public-folder": "rm -rfv server/public && npm run copy-files",
     "copy-files": "cp -r client/dist/ server/public/",
-    "kill-server": "sudo fuser -k 9080/tcp",
+    "kill-server": "sudo fuser -k 8080/tcp",
     "kill-client": "sudo fuser -k 3000/tcp",
     "kill-ports": "npm run kill-server && npm run kill-client"
   },
