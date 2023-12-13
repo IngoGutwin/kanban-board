@@ -143,14 +143,6 @@ var htmlElements = {
   themeModeToggle: null,
   taskBar: null
 };
-function setSidebarHeight() {
-  setTimeout(function () {
-    var appContainerHeight = htmlElements.app.offsetHeight;
-    var topBarHeight = htmlElements.topBar.offsetHeight;
-    var sideBarHeight = appContainerHeight - topBarHeight;
-    htmlElements.sideBar.style.height = "".concat(sideBarHeight, "px");
-  }, 500);
-}
 function loadLogo() {
   if (htmlElements.logo !== null) {
     htmlElements.logo.remove();
@@ -213,7 +205,6 @@ function loadSideBarToggle() {
       htmlElements.boardTitle.insertAdjacentHTML('beforeend', sideBarToggle());
     } else if (window.innerWidth > 700) {
       htmlElements.sideBar.insertAdjacentHTML('beforeend', sideBarToggle());
-      setSidebarHeight();
     }
   }
   insertToggle();
@@ -349,4 +340,4 @@ window.addEventListener('load', loadApp);
 /******/ var __webpack_exports__ = (__webpack_exec__(101));
 /******/ }
 ]);
-//# sourceMappingURL=bundle7e0ad22feaf23c3acf27.js.map
+//# sourceMappingURL=bundle8a0b149a182f1a7e713a.js.map
