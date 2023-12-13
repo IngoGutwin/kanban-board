@@ -1,0 +1,38 @@
+.primary-btn-L {
+  @apply py-3 px-6 bg-main-purple text-white;
+
+  &:hover {
+    @apply bg-main-purple-hover;
+  }
+}
+
+.primary-btn-S {
+  @apply py-5 px-6 text-white font-bold;
+
+  &:hover {
+    @apply bg-main-purple-hover;
+  }
+}
+
+.secondary-btn {
+  @apply py-5 px-6 bg-main-purple opacity-10 text-main-purple;
+
+  &:hover {
+    @apply bg-main-purple opacity-25;
+  }
+}
+
+.destructive-btn {
+  @apply py-5 px-6 bg-red text-white font-bold;
+
+  &:hover {
+    @apply bg-red-hover;
+  }
+}
+
+.primary-btn-L,
+.primary-btn-S,
+.secondary-btn,
+.destructive-btn {
+  @apply rounded-full w-fit font-bold transition-all ease-in duration-200;
+}
