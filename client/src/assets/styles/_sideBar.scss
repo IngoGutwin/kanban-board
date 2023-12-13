@@ -90,7 +90,7 @@
 
 @screen md {
   .side-bar {
-    @apply static rounded-none justify-between border-r border-r-lines-light dark:border-r-lines-dark;
+    @apply static rounded-none justify-between border-r border-r-lines-light dark:border-r-lines-dark w-full col-start-1 col-end-2;
 
     .side-bar-boards {
       @apply flex-grow;

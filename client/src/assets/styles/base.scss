@@ -22,12 +22,16 @@ h3 {
   @apply text-xs leading-5 font-bold;
 }
 
+.app-container {
+  @apply flex flex-col bg-light-grey dark:bg-very-dark-grey text-black dark:text-white w-full font-jakarta h-screen transition duration-300 ease-in;
+}
+
 @screen md {
   h1 {
     @apply text-2xl leading-8 font-bold;
   }
-}
-
-.app-container {
-  @apply bg-light-grey dark:bg-very-dark-grey text-black dark:text-white w-full font-jakarta h-screen transition duration-300 ease-in;
+  .app-container {
+    @apply flex-none bg-light-grey dark:bg-very-dark-grey text-black dark:text-white w-full font-jakarta h-screen transition duration-300 ease-in grid grid-flow-row auto-rows-max;
+    grid-template-columns: minmax(320px, 320px) minmax(0px, 1fr);
+  }
 }
