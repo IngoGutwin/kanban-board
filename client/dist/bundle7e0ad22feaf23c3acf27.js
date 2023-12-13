@@ -43,7 +43,7 @@ function topBar(boardsData) {
       name: 'NO BOARDS'
     };
   }
-  return "\n    <div class=\"top-bar\" id=\"top-bar\">\n      <div class=\"logo-container\" id=\"logo-container\"></div>\n      <div class=\"board-title\" id=\"board-title\">\n        <h1 class=\"board-title-title\" id=\"board-title-title\">".concat(boardsData[0].name, "</h1>\n      </div>\n      <div class=\"board-controls\">\n        <button class=\"add-new-task-btn\" id=\"add-new-task-btn\" data-has-tasks=\"false\">\n          <svg data-src=").concat(icon_add_task_mobile_namespaceObject, " class=\"add-new-task-icon\"/>\n          <h2 class=\"add-new-task-paragraph\">Add New Task</h2>\n        </button>\n        <button class=\"board-options\" id=\"board-options\">\n          <svg data-src=").concat(icon_vertical_ellipsis_namespaceObject, " class=\"board-options-icon\"/>\n        </button>\n      </div>\n    </div> \n  ");
+  return "\n    <div class=\"top-bar\" id=\"top-bar\">\n      <div class=\"logo-container\" id=\"logo-container\"></div>\n      <div class=\"board-title\" id=\"board-title\">\n        <h1 class=\"board-title-title\" id=\"board-title-heading\">No Board Selected</h1>\n      </div>\n      <div class=\"board-controls\">\n        <button class=\"add-new-task-btn primary-btn-L\" id=\"add-new-task-btn\" data-has-tasks=\"false\">\n          <svg data-src=".concat(icon_add_task_mobile_namespaceObject, " class=\"add-new-task-icon\"/>\n          <h2 class=\"add-new-task-heading\">Add New Task</h2>\n        </button>\n        <button class=\"board-options\" id=\"board-options\">\n          <svg data-src=").concat(icon_vertical_ellipsis_namespaceObject, " class=\"board-options-icon\"/>\n        </button>\n      </div>\n    </div> \n  ");
 }
 ;// CONCATENATED MODULE: ./src/utils/themeMode.js
 function setThemeMode() {
@@ -98,7 +98,7 @@ function loadSideBarToggleIcon() {
     } else {
       if (localStorage.sideBar === 'open') {
         result[0] = icon_hide_sidebar_namespaceObject;
-        result[1] = 'Hide Sidebar';
+        result[1] = '<h3>Hide Sidebar</h3>';
       } else {
         result[0] = icon_show_sidebar_namespaceObject;
       }
@@ -111,14 +111,22 @@ function sideBarToggle() {
 }
 function loadBoards(boardsData) {
   var boardButtons = boardsData.map(function (board) {
-    return "\n    <button class=\"side-bar-board\" data-board-active=\"false\">\n        <svg data-src=".concat(icon_board_namespaceObject, " class=\"side-bar-board-icon\"/>\n        <h2 class=\"side-bar-board-name\">").concat(board.name, "</h2>\n      </button>\n  ");
+    return "\n    <button class=\"side-bar-board\" data-board-active=\"false\">\n        <svg data-src=".concat(icon_board_namespaceObject, " class=\"side-bar-board-icon\"/>\n        <h3 class=\"side-bar-board-name\">").concat(board.name, "</h3>\n      </button>\n  ");
   });
   return boardButtons.join('');
 }
 function sideBar(boardsData) {
-  return "\n    <div \n      class=\"side-bar\"\n      id=\"side-bar\" \n      data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"\n    >\n      <div class=\"side-bar-boards\" id=\"side-bar-boards\">\n        <h3 class=\"side-bar-heading\">all boards (").concat(boardsData.length, ")</h3>\n        ").concat(loadBoards(boardsData), "\n        <button class=\"side-bar-new-board\" id=\"create-new-board-btn\">\n          <svg data-src=").concat(icon_board_namespaceObject, " class=\"side-bar-new-board-icon\"/>\n          <h2 class=\"side-bar-new-board-heading\">+ Create New Board</h2>\n        </button>\n      </div>\n      <div class=\"side-bar-theme-mode\" id=\"side-bar-theme-mode\" \n        data-theme-mode=\"").concat(localStorage.theme, "\">\n        <svg data-src=").concat(icon_light_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n        <div class=\"side-bar-theme-mode-toggle\" id=\"side-bar-theme-mode-toggle\">\n          <button class=\"side-bar-theme-mode-btn\"></button>\n        </div>\n        <svg data-src=").concat(icon_dark_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n      </div>\n    </div>\n  ");
+  return "\n    <div \n      class=\"side-bar\"\n      id=\"side-bar\" \n      data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"\n    >\n      <div class=\"side-bar-boards\" id=\"side-bar-boards\">\n        <h4 class=\"side-bar-heading\">all boards (").concat(boardsData.length, ")</h4>\n        ").concat(loadBoards(boardsData), "\n        <button class=\"side-bar-new-board\" id=\"create-new-board-btn\">\n          <svg data-src=").concat(icon_board_namespaceObject, " class=\"side-bar-new-board-icon\"/>\n          <h3 class=\"side-bar-new-board-heading\">+ Create New Board</h3>\n        </button>\n      </div>\n      <div class=\"side-bar-theme-mode\" id=\"side-bar-theme-mode\" \n        data-theme-mode=\"").concat(localStorage.theme, "\">\n        <svg data-src=").concat(icon_light_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n        <div class=\"side-bar-theme-mode-toggle\" id=\"side-bar-theme-mode-toggle\">\n          <button class=\"side-bar-theme-mode-btn\"></button>\n        </div>\n        <svg data-src=").concat(icon_dark_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n      </div>\n    </div>\n  ");
+}
+;// CONCATENATED MODULE: ./src/components/taskBar.js
+function emptyBoard() {
+  return "\n    <div class=\"task-bar-empty-board\" id=\"task-empty-board\">\n      <h2 class=\"task-bar-heading\">This board is empty. Create a new column to get started.</h2>\n      <button class=\"primary-btn-L\" id=\"task-bar-add-new-columns\">+ Add New Column</button>\n    </div>\n  ";
+}
+function taskBar() {
+  return "\n    <div class=\"task-bar\" id=\"task-bar\" data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"></div>  \n  ");
 }
 ;// CONCATENATED MODULE: ./src/utils/loadLayout.js
+
 
 
 
@@ -132,7 +140,8 @@ var htmlElements = {
   sideBarToggleContainer: null,
   sideBarToggleIcon: null,
   boardTitle: null,
-  themeModeToggle: null
+  themeModeToggle: null,
+  taskBar: null
 };
 function setSidebarHeight() {
   setTimeout(function () {
@@ -140,7 +149,7 @@ function setSidebarHeight() {
     var topBarHeight = htmlElements.topBar.offsetHeight;
     var sideBarHeight = appContainerHeight - topBarHeight;
     htmlElements.sideBar.style.height = "".concat(sideBarHeight, "px");
-  }, 300);
+  }, 500);
 }
 function loadLogo() {
   if (htmlElements.logo !== null) {
@@ -158,6 +167,7 @@ function getHtmlElements() {
   htmlElements.boardTitle = document.querySelector('#board-title');
   htmlElements.themeModeToggle = htmlElements.sideBar.querySelector('#side-bar-theme-mode-toggle');
   htmlElements.themeModeContainer = htmlElements.sideBar.querySelector('#side-bar-theme-mode');
+  htmlElements.taskBar = document.querySelector('#task-bar');
 }
 function reloadSideBarToggleIcon() {
   htmlElements.sideBarToggleBtn.insertAdjacentHTML('afterbegin', loadSideBarToggleIcon());
@@ -165,17 +175,22 @@ function reloadSideBarToggleIcon() {
 function updateSideBarState(state) {
   htmlElements.sideBar.dataset.sideBarToggle = state;
   htmlElements.sideBarToggleContainer.dataset.sideBarToggle = state;
+  htmlElements.taskBar.dataset.sideBarToggle = state;
+  htmlElements.app.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
-  reloadSideBarToggleIcon();
+  // reloadSideBarToggleIcon();
 }
+
 function toggleSideBar() {
   htmlElements.sideBarToggleIcon = document.querySelector('#side-bar-toggle-icon');
   htmlElements.sideBarToggleIcon.remove();
   htmlElements.sideBarToggleBtn.innerText = '';
   if (localStorage.sideBar === 'open') {
     updateSideBarState('hidden');
+    reloadSideBarToggleIcon();
   } else {
     updateSideBarState('open');
+    reloadSideBarToggleIcon();
   }
 }
 function activateEventListeners() {
@@ -207,11 +222,13 @@ function loadSideBarToggle() {
 function loadLayout(boardsData) {
   setThemeMode();
   htmlElements.app = document.querySelector('#app');
+  htmlElements.app.insertAdjacentHTML('afterbegin', taskBar());
   htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
   htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
   getHtmlElements();
   loadLogo();
   loadSideBarToggle();
+  updateSideBarState(localStorage.sideBar);
   reloadEventListeners();
   activateEventListeners();
 }
@@ -227,20 +244,14 @@ function loadOnScreenResize() {
   }
 }
 window.addEventListener('resize', loadOnScreenResize);
-;// CONCATENATED MODULE: ./src/components/taskBar.js
-function emptyBoard() {
-  return "\n    <div class=\"task-bar-empty-board\" id=\"task-empty-board\">\n      <h1 class=\"task-bar-heading\">This board is empty. Create a new column to get started.<h1>\n      <button class=\"task-bar-add-new-column\" id=\"task-bar-add-new-columns\"></button>\n    </div>\n  ";
-}
-function taskBar(tasks) {
-  return "\n    <div class=\"task-bar\" id=\"task-bar\">\n      will be Continued\n    </div>  \n  ";
-}
 ;// CONCATENATED MODULE: ./src/utils/boardHandler.js
 
 var boardHandler_htmlElements = {
   sideBarBoards: null,
   activeBoard: null,
   addNewTaskButton: null,
-  appContainer: null
+  taskBar: null,
+  boardTitleHeading: null
 };
 var boards = null;
 function createNewBoard() {
@@ -284,6 +295,7 @@ function updateBoardState(currentTarget) {
   });
   currentTarget.dataset.boardActive = true;
   boardHandler_htmlElements.activeBoard = currentTarget;
+  boardHandler_htmlElements.boardTitleHeading.innerText = boardHandler_htmlElements.activeBoard.innerText;
   checkIfTasksExist();
 }
 function processInteractionOnBoards(e) {
@@ -301,7 +313,8 @@ function boardHandler_activateEventListeners() {
 function boardHandler_getHtmlElements() {
   boardHandler_htmlElements.sideBarBoards = document.querySelector('#side-bar-boards').querySelectorAll('button');
   boardHandler_htmlElements.addNewTaskButton = document.querySelector('#add-new-task-btn');
-  boardHandler_htmlElements.appContainer = document.querySelector('#app');
+  boardHandler_htmlElements.appContainer = document.querySelector('#task-bar');
+  boardHandler_htmlElements.boardTitleHeading = document.querySelector('#board-title-heading');
 }
 function handleBoards(boardsData) {
   boards = boardsData;
@@ -336,4 +349,4 @@ window.addEventListener('load', loadApp);
 /******/ var __webpack_exports__ = (__webpack_exec__(101));
 /******/ }
 ]);
-//# sourceMappingURL=bundle1d3b516c6fd21bfccbe4.js.map
+//# sourceMappingURL=bundle7e0ad22feaf23c3acf27.js.map
