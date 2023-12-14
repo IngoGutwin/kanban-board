@@ -69,7 +69,6 @@ function updateSideBarState(state) {
   htmlElements.taskBar.dataset.sideBarToggle = state;
   htmlElements.app.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
-  // reloadSideBarToggleIcon();
 }
 
 function toggleSideBar() {
@@ -90,7 +89,7 @@ function toggleSideBar() {
 function activateEventListeners() {
   htmlElements.themeModeToggle.addEventListener('click', () => {
     toggleThemeMode(htmlElements.themeModeContainer);
-    loadLogo();
+    loadLogo(appState.mobile);
   });
 }
 
