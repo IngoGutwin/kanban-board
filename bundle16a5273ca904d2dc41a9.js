@@ -168,9 +168,7 @@ function updateSideBarState(state) {
   htmlElements.taskBar.dataset.sideBarToggle = state;
   htmlElements.app.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
-  // reloadSideBarToggleIcon();
 }
-
 function toggleSideBar() {
   htmlElements.sideBarToggleIcon = document.querySelector('#side-bar-toggle-icon');
   htmlElements.sideBarToggleIcon.remove();
@@ -186,7 +184,7 @@ function toggleSideBar() {
 function activateEventListeners() {
   htmlElements.themeModeToggle.addEventListener('click', function () {
     toggleThemeMode(htmlElements.themeModeContainer);
-    loadLogo();
+    loadLogo(appState.mobile);
   });
 }
 function reloadEventListeners() {
@@ -343,4 +341,4 @@ window.addEventListener('load', loadApp);
 /******/ var __webpack_exports__ = (__webpack_exec__(101));
 /******/ }
 ]);
-//# sourceMappingURL=bundlef7088c3bb322c4176a32.js.map
+//# sourceMappingURL=bundle16a5273ca904d2dc41a9.js.map
