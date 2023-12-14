@@ -25,15 +25,15 @@ const icon_vertical_ellipsis_namespaceObject = __webpack_require__.p + "assets/i
 
 
 
-function getLogoType() {
-  if (window.innerWidth < 700) {
+function getLogoType(isScreenMobile) {
+  if (isScreenMobile) {
     return [logo_mobile_namespaceObject, 'mobile'];
   } else {
     return [localStorage.theme === 'dark' ? logo_dark_namespaceObject : logo_light_namespaceObject, localStorage.theme];
   }
 }
-function logo() {
-  var logoType = getLogoType();
+function logo(isScreenMobile) {
+  var logoType = getLogoType(isScreenMobile);
   return "<svg data-src=".concat(logoType[0], " class=\"logo\" id=\"logo\" data-logo=\"").concat(logoType[1], "\"/>");
 }
 function topBar(boardsData) {
@@ -87,27 +87,22 @@ const icon_show_sidebar_namespaceObject = __webpack_require__.p + "assets/images
 
 
 
-function loadSideBarToggleIcon() {
+function loadSideBarToggleIcon(isScreenMobile) {
   var result = ['', ''];
-  if (!('sideBar' in localStorage)) {
-    localStorage.sideBar = 'open';
-    loadSideBarToggleIcon();
+  if (isScreenMobile) {
+    result[0] = icon_chevron_down_namespaceObject;
   } else {
-    if (window.innerWidth < 700) {
-      result[0] = icon_chevron_down_namespaceObject;
+    if (localStorage.sideBar === 'open') {
+      result[0] = icon_hide_sidebar_namespaceObject;
+      result[1] = '<h3>Hide Sidebar</h3>';
     } else {
-      if (localStorage.sideBar === 'open') {
-        result[0] = icon_hide_sidebar_namespaceObject;
-        result[1] = '<h3>Hide Sidebar</h3>';
-      } else {
-        result[0] = icon_show_sidebar_namespaceObject;
-      }
+      result[0] = icon_show_sidebar_namespaceObject;
     }
   }
   return "<svg data-src=".concat(result[0], " class=\"side-bar-toggle-icon\" id=\"side-bar-toggle-icon\"/> ").concat(result[1]);
 }
-function sideBarToggle() {
-  return "\n    <div class=\"side-bar-toggle-container\" \n      id=\"side-bar-toggle-container\" \n      data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"\n    >\n      <button class=\"side-bar-toggle-btn\" id=\"side-bar-toggle-btn\">\n        ").concat(loadSideBarToggleIcon(), "\n      </button>\n    </div>\n  ");
+function sideBarToggle(isScreenMobile) {
+  return "\n    <div class=\"side-bar-toggle-container\" \n      id=\"side-bar-toggle-container\" \n      data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"\n    >\n      <button class=\"side-bar-toggle-btn\" id=\"side-bar-toggle-btn\">\n        ").concat(loadSideBarToggleIcon(isScreenMobile), "\n      </button>\n    </div>\n  ");
 }
 function loadBoards(boardsData) {
   var boardButtons = boardsData.map(function (board) {
@@ -143,11 +138,14 @@ var htmlElements = {
   themeModeToggle: null,
   taskBar: null
 };
-function loadLogo() {
+var appState = {
+  mobile: null
+};
+function loadLogo(isScreenMobile) {
   if (htmlElements.logo !== null) {
     htmlElements.logo.remove();
   }
-  htmlElements.logoContainer.insertAdjacentHTML('afterbegin', logo());
+  htmlElements.logoContainer.insertAdjacentHTML('afterbegin', logo(isScreenMobile));
   htmlElements.logo = document.querySelector('#logo');
 }
 function getHtmlElements() {
@@ -162,7 +160,7 @@ function getHtmlElements() {
   htmlElements.taskBar = document.querySelector('#task-bar');
 }
 function reloadSideBarToggleIcon() {
-  htmlElements.sideBarToggleBtn.insertAdjacentHTML('afterbegin', loadSideBarToggleIcon());
+  htmlElements.sideBarToggleBtn.insertAdjacentHTML('afterbegin', loadSideBarToggleIcon(appState.mobile));
 }
 function updateSideBarState(state) {
   htmlElements.sideBar.dataset.sideBarToggle = state;
@@ -179,7 +177,7 @@ function toggleSideBar() {
   htmlElements.sideBarToggleBtn.innerText = '';
   if (localStorage.sideBar === 'open') {
     updateSideBarState('hidden');
-    reloadSideBarToggleIcon();
+    reloadSideBarToggleIcon(appState.mobile);
   } else {
     updateSideBarState('open');
     reloadSideBarToggleIcon();
@@ -200,11 +198,11 @@ function loadSideBarToggle() {
     htmlElements.sideBarToggleContainer.remove();
   }
   function insertToggle() {
-    if (window.innerWidth < 700) {
+    if (appState.mobile) {
       htmlElements.sideBar.style.height = null;
-      htmlElements.boardTitle.insertAdjacentHTML('beforeend', sideBarToggle());
-    } else if (window.innerWidth > 700) {
-      htmlElements.sideBar.insertAdjacentHTML('beforeend', sideBarToggle());
+      htmlElements.boardTitle.insertAdjacentHTML('beforeend', sideBarToggle(appState.mobile));
+    } else if (!appState.mobile) {
+      htmlElements.sideBar.insertAdjacentHTML('beforeend', sideBarToggle(appState.mobile));
     }
   }
   insertToggle();
@@ -213,24 +211,29 @@ function loadSideBarToggle() {
 function loadLayout(boardsData) {
   setThemeMode();
   htmlElements.app = document.querySelector('#app');
+  if (htmlElements.app.clientWidth < 700) {
+    appState.mobile = true;
+  }
   htmlElements.app.insertAdjacentHTML('afterbegin', taskBar());
   htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
   htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
   getHtmlElements();
-  loadLogo();
+  loadLogo(appState.mobile);
   loadSideBarToggle();
-  updateSideBarState(localStorage.sideBar);
   reloadEventListeners();
   activateEventListeners();
+  updateSideBarState(localStorage.sideBar);
 }
 function loadOnScreenResize() {
-  if (window.innerWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
-    loadLogo();
-    loadSideBarToggle();
+  if (htmlElements.app.clientWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
+    appState.mobile = true;
+    loadLogo(appState.mobile);
+    loadSideBarToggle(appState.mobile);
     reloadEventListeners();
-  } else if (window.innerWidth > 700 && htmlElements.logo.dataset.logo === 'mobile') {
-    loadLogo();
-    loadSideBarToggle();
+  } else if (htmlElements.app.clientWidth > 700 && htmlElements.logo.dataset.logo === 'mobile') {
+    appState.mobile = false;
+    loadLogo(appState.mobile);
+    loadSideBarToggle(appState.mobile);
     reloadEventListeners();
   }
 }
@@ -340,4 +343,4 @@ window.addEventListener('load', loadApp);
 /******/ var __webpack_exports__ = (__webpack_exec__(101));
 /******/ }
 ]);
-//# sourceMappingURL=bundle8a0b149a182f1a7e713a.js.map
+//# sourceMappingURL=bundlef7088c3bb322c4176a32.js.map
