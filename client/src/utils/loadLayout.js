@@ -8,7 +8,7 @@ import {
 import { taskBar } from 'Components/taskBar';
 
 const htmlElements = {
-  app: null,
+  appContainer: null,
   topBar: null,
   logoContainer: null,
   logo: null,
@@ -67,7 +67,7 @@ function updateSideBarState(state) {
   htmlElements.sideBar.dataset.sideBarToggle = state;
   htmlElements.sideBarToggleContainer.dataset.sideBarToggle = state;
   htmlElements.taskBar.dataset.sideBarToggle = state;
-  htmlElements.app.dataset.sideBarToggle = state;
+  htmlElements.appContainer.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
 }
 
@@ -124,13 +124,16 @@ function loadSideBarToggle() {
 
 export function loadLayout(boardsData) {
   setThemeMode();
-  htmlElements.app = document.querySelector('#app');
-  if (htmlElements.app.clientWidth < 700) {
+  htmlElements.appContainer = document.querySelector('#app');
+  if (htmlElements.appContainer.clientWidth < 700) {
     appState.mobile = true;
   }
-  htmlElements.app.insertAdjacentHTML('afterbegin', taskBar());
-  htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
-  htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
+  htmlElements.appContainer.insertAdjacentHTML('afterbegin', taskBar());
+  htmlElements.appContainer.insertAdjacentHTML(
+    'afterbegin',
+    sideBar(boardsData)
+  );
+  htmlElements.appContainer.insertAdjacentHTML('afterbegin', topBar());
   getHtmlElements();
   loadLogo(appState.mobile);
   loadSideBarToggle();
@@ -141,7 +144,7 @@ export function loadLayout(boardsData) {
 
 function loadOnScreenResize() {
   if (
-    htmlElements.app.clientWidth < 700 &&
+    htmlElements.appContainer.clientWidth < 700 &&
     htmlElements.logo.dataset.logo !== 'mobile'
   ) {
     appState.mobile = true;
@@ -149,7 +152,7 @@ function loadOnScreenResize() {
     loadSideBarToggle(appState.mobile);
     reloadEventListeners();
   } else if (
-    htmlElements.app.clientWidth > 700 &&
+    htmlElements.appContainer.clientWidth > 700 &&
     htmlElements.logo.dataset.logo === 'mobile'
   ) {
     appState.mobile = false;

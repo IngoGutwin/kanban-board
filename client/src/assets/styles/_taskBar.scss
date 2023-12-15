@@ -1,8 +1,48 @@
 .task-bar {
-  @apply flex flex-grow justify-center items-center col-start-2 col-end-3 transition-transform ease-out duration-700 text-center;
+  @apply flex flex-grow col-start-2 col-end-3 transition-transform ease-out duration-700 overflow-auto;
 
   &[data-side-bar-toggle='hidden'] {
-    @apply col-start-1 col-span-full row-start-2;
+    @apply col-start-1 col-span-full row-start-2 w-full;
+  }
+
+  .task-bar-column {
+    @apply flex flex-col items-center min-w-[280px] max-w-[280px];
+
+    .task-bar-column-name {
+      @apply w-full flex items-center;
+
+      .task-bar-column-tag-color {
+        @apply w-4 h-4 rounded-full ml-6;
+      }
+
+      .task-bar-heading {
+        @apply uppercase text-medium-grey p-5;
+      }
+    }
+
+    .task-bar-task {
+      @apply w-[280px] flex flex-col justify-center font-bold bg-white dark:bg-dark-grey mb-5 rounded-lg;
+
+      .task-bar-task-heading {
+        @apply text-black dark:text-white pt-6 px-4;
+      }
+
+      .task-bar-task-subtasks {
+        @apply text-medium-grey text-xs leading-4 pt-2 pb-6  px-4;
+      }
+    }
+
+    &:nth-child(odd) {
+      @apply mx-4;
+    }
+  }
+
+  .task-bar-add-new-column {
+    @apply text-medium-grey justify-center;
+
+    .task-bar-add-new-column-button {
+      @apply cursor-pointer;
+    }
   }
 
   .task-bar-empty-board {
