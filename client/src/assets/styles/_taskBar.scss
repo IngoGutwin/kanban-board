@@ -46,6 +46,6 @@
   }
 
   .task-bar-empty-board {
-    @apply flex flex-col gap-4 items-center px-4;
+    @apply flex flex-col gap-4 justify-center items-center px-4 w-full;
   }
 }

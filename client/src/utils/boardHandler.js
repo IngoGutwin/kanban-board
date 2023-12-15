@@ -30,12 +30,18 @@ function createNewBoard() {
   console.log(newBoard);
 }
 
+function clearTaskBar() {
+  htmlElements.taskBar.innerHTML = '';
+}
+
 function updateAddNewTaskButton(buttonState) {
   htmlElements.addNewTaskButton.dataset.hasTasks = buttonState;
 }
 
 function loadEmptyTaskBar() {
+  clearTaskBar();
   updateAddNewTaskButton(false);
+  htmlElements.taskBar.insertAdjacentHTML('afterbegin', emptyBoard());
 }
 
 function loadSubTitle(subTasks) {
@@ -66,13 +72,8 @@ function loadTasks(tasks) {
   return tasksHtml.join('');
 }
 
-function clearTaskBar() {
-  htmlElements.taskBar.innerHTML = '';
-}
-
 function generateRandomColor() {
   let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  console.log(randomColor);
   return randomColor;
 }
 
