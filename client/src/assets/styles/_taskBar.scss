@@ -9,7 +9,7 @@
     @apply flex flex-col items-center min-w-[280px] max-w-[280px];
 
     .task-bar-column-name {
-      @apply w-full flex items-center;
+      @apply w-full flex items-center text-center;
 
       .task-bar-column-tag-color {
         @apply w-4 h-4 rounded-full ml-6;
@@ -46,6 +46,6 @@
   }
 
   .task-bar-empty-board {
-    @apply flex flex-col gap-4 justify-center items-center px-4 w-full;
+    @apply flex flex-col gap-4 justify-center items-center px-4 w-full text-center;
   }
 }

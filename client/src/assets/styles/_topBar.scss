@@ -41,7 +41,7 @@
       }
     }
     .board-options {
-      @apply p-4 pr-9 flex justify-center items-center;
+      @apply p-4 pr-4 flex justify-center items-center;
 
       .board-options-icon {
         @apply h-4 fill-medium-grey;
@@ -60,6 +60,12 @@
     }
     .board-title {
       @apply pl-6 py-7;
+    }
+
+    .board-controls {
+      .board-options {
+        @apply pr-9;
+      }
     }
   }
 }
