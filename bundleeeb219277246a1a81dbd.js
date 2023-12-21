@@ -1,12 +1,12 @@
 (self["webpackChunkkanban_client"] = self["webpackChunkkanban_client"] || []).push([[296],{
 
-/***/ 101:
+/***/ 669:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 ;// CONCATENATED MODULE: ./data/data.json
-const data_namespaceObject = JSON.parse('{"t":[{"name":"Platform Launch","columns":[{"name":"Todo","tasks":[{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for search","description":"","status":"Todo","subtasks":[{"title":"Search page","isCompleted":false}]},{"title":"Build settings UI","description":"","status":"Todo","subtasks":[{"title":"Account page","isCompleted":false},{"title":"Billing page","isCompleted":false}]},{"title":"QA and test all major user journeys","description":"Once we feel version one is ready, we need to rigorously test it both internally and externally to identify any major gaps.","status":"Todo","subtasks":[{"title":"Internal testing","isCompleted":false},{"title":"External testing","isCompleted":false}]}]},{"name":"Doing","tasks":[{"title":"Design settings and search pages","description":"","status":"Doing","subtasks":[{"title":"Settings - Account page","isCompleted":true},{"title":"Settings - Billing page","isCompleted":true},{"title":"Search page","isCompleted":false}]},{"title":"Add account management endpoints","description":"","status":"Doing","subtasks":[{"title":"Upgrade plan","isCompleted":true},{"title":"Cancel plan","isCompleted":true},{"title":"Update payment method","isCompleted":false}]},{"title":"Design onboarding flow","description":"","status":"Doing","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Add search enpoints","description":"","status":"Doing","subtasks":[{"title":"Add search endpoint","isCompleted":true},{"title":"Define search filters","isCompleted":false}]},{"title":"Add authentication endpoints","description":"","status":"Doing","subtasks":[{"title":"Define user model","isCompleted":true},{"title":"Add auth endpoints","isCompleted":false}]},{"title":"Research pricing points of various competitors and trial different business models","description":"We know what we\'re planning to build for version one. Now we need to finalise the first pricing model we\'ll use. Keep iterating the subtasks until we have a coherent proposition.","status":"Doing","subtasks":[{"title":"Research competitor pricing and business models","isCompleted":true},{"title":"Outline a business model that works for our solution","isCompleted":false},{"title":"Talk to potential customers about our proposed solution and ask for fair price expectancy","isCompleted":false}]}]},{"name":"Done","tasks":[{"title":"Conduct 5 wireframe tests","description":"Ensure the layout continues to make sense and we have strong buy-in from potential users.","status":"Done","subtasks":[{"title":"Complete 5 wireframe prototype tests","isCompleted":true}]},{"title":"Create wireframe prototype","description":"Create a greyscale clickable wireframe prototype to test our asssumptions so far.","status":"Done","subtasks":[{"title":"Create clickable wireframe prototype in Balsamiq","isCompleted":true}]},{"title":"Review results of usability tests and iterate","description":"Keep iterating through the subtasks until we\'re clear on the core concepts for the app.","status":"Done","subtasks":[{"title":"Meet to review notes from previous tests and plan changes","isCompleted":true},{"title":"Make changes to paper prototypes","isCompleted":true},{"title":"Conduct 5 usability tests","isCompleted":true}]},{"title":"Create paper prototypes and conduct 10 usability tests with potential customers","description":"","status":"Done","subtasks":[{"title":"Create paper prototypes for version one","isCompleted":true},{"title":"Complete 10 usability tests","isCompleted":true}]},{"title":"Market discovery","description":"We need to define and refine our core product. Interviews will help us learn common pain points and help us define the strongest MVP.","status":"Done","subtasks":[{"title":"Interview 10 prospective customers","isCompleted":true}]},{"title":"Competitor analysis","description":"","status":"Done","subtasks":[{"title":"Find direct and indirect competitors","isCompleted":true},{"title":"SWOT analysis for each competitor","isCompleted":true}]},{"title":"Research the market","description":"We need to get a solid overview of the market to ensure we have up-to-date estimates of market size and demand.","status":"Done","subtasks":[{"title":"Write up research analysis","isCompleted":true},{"title":"Calculate TAM","isCompleted":true}]}]}]},{"name":"Marketing Plan","columns":[{"name":"Todo","tasks":[{"title":"Plan Product Hunt launch","description":"","status":"Todo","subtasks":[{"title":"Find hunter","isCompleted":false},{"title":"Gather assets","isCompleted":false},{"title":"Draft product page","isCompleted":false},{"title":"Notify customers","isCompleted":false},{"title":"Notify network","isCompleted":false},{"title":"Launch!","isCompleted":false}]},{"title":"Share on Show HN","description":"","status":"","subtasks":[{"title":"Draft out HN post","isCompleted":false},{"title":"Get feedback and refine","isCompleted":false},{"title":"Publish post","isCompleted":false}]},{"title":"Write launch article to publish on multiple channels","description":"","status":"","subtasks":[{"title":"Write article","isCompleted":false},{"title":"Publish on LinkedIn","isCompleted":false},{"title":"Publish on Inndie Hackers","isCompleted":false},{"title":"Publish on Medium","isCompleted":false}]}]},{"name":"Doing","tasks":[]},{"name":"Done","tasks":[]}]},{"name":"Roadmap","columns":[{"name":"Now","tasks":[{"title":"Launch version one","description":"","status":"","subtasks":[{"title":"Launch privately to our waitlist","isCompleted":false},{"title":"Launch publicly on PH, HN, etc.","isCompleted":false}]},{"title":"Review early feedback and plan next steps for roadmap","description":"Beyond the initial launch, we\'re keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.","status":"","subtasks":[{"title":"Interview 10 customers","isCompleted":false},{"title":"Review common customer pain points and suggestions","isCompleted":false},{"title":"Outline next steps for our roadmap","isCompleted":false}]}]},{"name":"Next","tasks":[]},{"name":"Later","tasks":[]}]},{"name":"empty"}]}');
+const data_namespaceObject = JSON.parse('{"t":[{"name":"Platform Launch","columns":[{"name":"Todo","tasks":[{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for onboarding flow","description":"","status":"Todo","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Build UI for search","description":"","status":"Todo","subtasks":[{"title":"Search page","isCompleted":false}]},{"title":"Build settings UI","description":"","status":"Todo","subtasks":[{"title":"Account page","isCompleted":false},{"title":"Billing page","isCompleted":false}]},{"title":"QA and test all major user journeys","description":"Once we feel version one is ready, we need to rigorously test it both internally and externally to identify any major gaps.","status":"Todo","subtasks":[{"title":"Internal testing","isCompleted":false},{"title":"External testing","isCompleted":false}]}]},{"name":"Doing","tasks":[{"title":"Design settings and search pages","description":"","status":"Doing","subtasks":[{"title":"Settings - Account page","isCompleted":true},{"title":"Settings - Billing page","isCompleted":true},{"title":"Search page","isCompleted":false}]},{"title":"Add account management endpoints","description":"","status":"Doing","subtasks":[{"title":"Upgrade plan","isCompleted":true},{"title":"Cancel plan","isCompleted":true},{"title":"Update payment method","isCompleted":false}]},{"title":"Design onboarding flow","description":"","status":"Doing","subtasks":[{"title":"Sign up page","isCompleted":true},{"title":"Sign in page","isCompleted":false},{"title":"Welcome page","isCompleted":false}]},{"title":"Add search enpoints","description":"","status":"Doing","subtasks":[{"title":"Add search endpoint","isCompleted":true},{"title":"Define search filters","isCompleted":false}]},{"title":"Add authentication endpoints","description":"","status":"Doing","subtasks":[{"title":"Define user model","isCompleted":true},{"title":"Add auth endpoints","isCompleted":false}]},{"title":"Research pricing points of various competitors and trial different business models","description":"We know what we\'re planning to build for version one. Now we need to finalise the first pricing model we\'ll use. Keep iterating the subtasks until we have a coherent proposition.","status":"Doing","subtasks":[{"title":"Research competitor pricing and business models","isCompleted":true},{"title":"Outline a business model that works for our solution","isCompleted":false},{"title":"Talk to potential customers about our proposed solution and ask for fair price expectancy","isCompleted":false}]}]},{"name":"Done","tasks":[{"title":"Conduct 5 wireframe tests","description":"Ensure the layout continues to make sense and we have strong buy-in from potential users.","status":"Done","subtasks":[{"title":"Complete 5 wireframe prototype tests","isCompleted":true}]},{"title":"Create wireframe prototype","description":"Create a greyscale clickable wireframe prototype to test our asssumptions so far.","status":"Done","subtasks":[{"title":"Create clickable wireframe prototype in Balsamiq","isCompleted":true}]},{"title":"Review results of usability tests and iterate","description":"Keep iterating through the subtasks until we\'re clear on the core concepts for the app.","status":"Done","subtasks":[{"title":"Meet to review notes from previous tests and plan changes","isCompleted":true},{"title":"Make changes to paper prototypes","isCompleted":true},{"title":"Conduct 5 usability tests","isCompleted":true}]},{"title":"Create paper prototypes and conduct 10 usability tests with potential customers","description":"","status":"Done","subtasks":[{"title":"Create paper prototypes for version one","isCompleted":true},{"title":"Complete 10 usability tests","isCompleted":true}]},{"title":"Market discovery","description":"We need to define and refine our core product. Interviews will help us learn common pain points and help us define the strongest MVP.","status":"Done","subtasks":[{"title":"Interview 10 prospective customers","isCompleted":true}]},{"title":"Competitor analysis","description":"","status":"Done","subtasks":[{"title":"Find direct and indirect competitors","isCompleted":true},{"title":"SWOT analysis for each competitor","isCompleted":true}]},{"title":"Research the market","description":"We need to get a solid overview of the market to ensure we have up-to-date estimates of market size and demand.","status":"Done","subtasks":[{"title":"Write up research analysis","isCompleted":true},{"title":"Calculate TAM","isCompleted":true}]}]}]},{"name":"Marketing Plan","columns":[{"name":"Todo","tasks":[{"title":"Plan Product Hunt launch","description":"","status":"Todo","subtasks":[{"title":"Find hunter","isCompleted":false},{"title":"Gather assets","isCompleted":false},{"title":"Draft product page","isCompleted":false},{"title":"Notify customers","isCompleted":false},{"title":"Notify network","isCompleted":false},{"title":"Launch!","isCompleted":false}]},{"title":"Share on Show HN","description":"","status":"","subtasks":[{"title":"Draft out HN post","isCompleted":false},{"title":"Get feedback and refine","isCompleted":false},{"title":"Publish post","isCompleted":false}]},{"title":"Write launch article to publish on multiple channels","description":"","status":"","subtasks":[{"title":"Write article","isCompleted":false},{"title":"Publish on LinkedIn","isCompleted":false},{"title":"Publish on Inndie Hackers","isCompleted":false},{"title":"Publish on Medium","isCompleted":false}]}]},{"name":"Doing","tasks":[]},{"name":"Done","tasks":[]}]},{"name":"Roadmap","columns":[{"name":"Now","tasks":[{"title":"Launch version one","description":"","status":"","subtasks":[{"title":"Launch privately to our waitlist","isCompleted":false},{"title":"Launch publicly on PH, HN, etc.","isCompleted":false}]},{"title":"Review early feedback and plan next steps for roadmap","description":"Beyond the initial launch, we\'re keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.","status":"","subtasks":[{"title":"Interview 10 customers","isCompleted":false},{"title":"Review common customer pain points and suggestions","isCompleted":false},{"title":"Outline next steps for our roadmap","isCompleted":false}]}]},{"name":"Next","tasks":[]},{"name":"Later","tasks":[]}]},{"name":"empty"}]}');
 // EXTERNAL MODULE: ./node_modules/external-svg-loader/dist/svg-loader.min.js
 var svg_loader_min = __webpack_require__(693);
 ;// CONCATENATED MODULE: ./src/assets/images/icons/logo-mobile.svg
@@ -36,14 +36,8 @@ function logo(isScreenMobile) {
   var logoType = getLogoType(isScreenMobile);
   return "<svg data-src=".concat(logoType[0], " class=\"logo\" id=\"logo\" data-logo=\"").concat(logoType[1], "\"/>");
 }
-function topBar(boardsData) {
-  if (boardsData[0] === undefined) {
-    console.log(boardsData);
-    boardsData[0] = {
-      name: 'NO BOARDS'
-    };
-  }
-  return "\n    <div class=\"top-bar\" id=\"top-bar\">\n      <div class=\"logo-container\" id=\"logo-container\"></div>\n      <div class=\"board-title\" id=\"board-title\">\n        <h1 class=\"board-title-title\" id=\"board-title-heading\">No Board Selected</h1>\n      </div>\n      <div class=\"board-controls\">\n        <button class=\"add-new-task-btn primary-btn-L\" id=\"add-new-task-btn\" data-has-tasks=\"false\">\n          <svg data-src=".concat(icon_add_task_mobile_namespaceObject, " class=\"add-new-task-icon\"/>\n          <h2 class=\"add-new-task-heading\">Add New Task</h2>\n        </button>\n        <button class=\"board-options\" id=\"board-options\">\n          <svg data-src=").concat(icon_vertical_ellipsis_namespaceObject, " class=\"board-options-icon\"/>\n        </button>\n      </div>\n    </div> \n  ");
+function topBar() {
+  return "\n    <div class=\"top-bar\" id=\"top-bar\">\n      <div class=\"logo-container\" id=\"logo-container\"></div>\n      <div class=\"board-title\" id=\"board-title\">\n        <h1 class=\"board-title-title\" id=\"board-title-heading\"></h1>\n      </div>\n      <div class=\"board-controls\">\n        <button class=\"add-new-task-btn primary-btn-L\" id=\"add-new-task-btn\" data-has-tasks=\"false\">\n          <svg data-src=".concat(icon_add_task_mobile_namespaceObject, " class=\"add-new-task-icon\"/>\n          <h2 class=\"add-new-task-heading\">Add New Task</h2>\n        </button>\n        <button class=\"board-options\" id=\"board-options\">\n          <svg data-src=").concat(icon_vertical_ellipsis_namespaceObject, " class=\"board-options-icon\"/>\n        </button>\n      </div>\n    </div> \n  ");
 }
 ;// CONCATENATED MODULE: ./src/utils/themeMode.js
 function setThemeMode() {
@@ -75,7 +69,7 @@ const icon_light_theme_namespaceObject = __webpack_require__.p + "assets/images/
 ;// CONCATENATED MODULE: ./src/assets/images/icons/icon-dark-theme.svg
 const icon_dark_theme_namespaceObject = __webpack_require__.p + "assets/images/icon-dark-theme.8321222e.svg";
 ;// CONCATENATED MODULE: ./src/assets/images/icons/icon-chevron-down.svg
-const icon_chevron_down_namespaceObject = __webpack_require__.p + "assets/images/icon-chevron-down.77595c15.svg";
+const icon_chevron_down_namespaceObject = __webpack_require__.p + "assets/images/icon-chevron-down.05cfdf4a.svg";
 ;// CONCATENATED MODULE: ./src/assets/images/icons/icon-hide-sidebar.svg
 const icon_hide_sidebar_namespaceObject = __webpack_require__.p + "assets/images/icon-hide-sidebar.0e2c68cc.svg";
 ;// CONCATENATED MODULE: ./src/assets/images/icons/icon-show-sidebar.svg
@@ -106,7 +100,7 @@ function sideBarToggle(isScreenMobile) {
 }
 function loadBoards(boardsData) {
   var boardButtons = boardsData.map(function (board) {
-    return "\n    <button class=\"side-bar-board\" data-board-active=\"false\">\n        <svg data-src=".concat(icon_board_namespaceObject, " class=\"side-bar-board-icon\"/>\n        <h3 class=\"side-bar-board-name\">").concat(board.name, "</h3>\n      </button>\n  ");
+    return "\n      <button class=\"side-bar-board\" data-board-active=\"false\">\n          <svg data-src=".concat(icon_board_namespaceObject, " class=\"side-bar-board-icon\"/>\n          <h3 class=\"side-bar-board-name\">").concat(board.name, "</h3>\n        </button>\n      ");
   });
   return boardButtons.join('');
 }
@@ -114,11 +108,37 @@ function sideBar(boardsData) {
   return "\n    <div \n      class=\"side-bar\"\n      id=\"side-bar\" \n      data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"\n    >\n      <div class=\"side-bar-boards\" id=\"side-bar-boards\">\n        <h4 class=\"side-bar-heading\">all boards (").concat(boardsData.length, ")</h4>\n        ").concat(loadBoards(boardsData), "\n        <button class=\"side-bar-new-board\" id=\"create-new-board-btn\">\n          <svg data-src=").concat(icon_board_namespaceObject, " class=\"side-bar-new-board-icon\"/>\n          <h3 class=\"side-bar-new-board-heading\">+ Create New Board</h3>\n        </button>\n      </div>\n      <div class=\"side-bar-theme-mode\" id=\"side-bar-theme-mode\" \n        data-theme-mode=\"").concat(localStorage.theme, "\">\n        <svg data-src=").concat(icon_light_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n        <div class=\"side-bar-theme-mode-toggle\" id=\"side-bar-theme-mode-toggle\">\n          <button class=\"side-bar-theme-mode-btn\"></button>\n        </div>\n        <svg data-src=").concat(icon_dark_theme_namespaceObject, " class=\"side-bar-theme-mode-icon\"/>\n      </div>\n    </div>\n  ");
 }
 ;// CONCATENATED MODULE: ./src/components/taskBar.js
+function addNewColumnButton(cssClass) {
+  return "\n    <button class=\"".concat(cssClass, "\" id=\"task-bar-add-new-column\">+ Add New Column</button>\n  ");
+}
 function emptyBoard() {
-  return "\n    <div class=\"task-bar-empty-board\" id=\"task-empty-board\">\n      <h2 class=\"task-bar-heading\">This board is empty. Create a new column to get started.</h2>\n      <button class=\"primary-btn-L\" id=\"task-bar-add-new-columns\">+ Add New Column</button>\n    </div>\n  ";
+  return "\n    <div class=\"task-bar-empty-board\" id=\"task-empty-board\">\n      <h2 class=\"task-bar-heading\">This board is empty. Create a new column to get started.</h2>\n      ".concat(addNewColumnButton('primary-btn-L'), "\n    </div>\n  ");
 }
 function taskBar() {
   return "\n    <div class=\"task-bar\" id=\"task-bar\" data-side-bar-toggle=\"".concat(localStorage.sideBar, "\"></div>  \n  ");
+}
+function loadSubTitle(subTasks) {
+  var sumCompletedTasks = subTasks.reduce(function (total, current) {
+    if (current.isCompleted) {
+      return total += 1;
+    } else {
+      return total += 0;
+    }
+  }, 0);
+  return "\n    ".concat(subTasks.length < 1 ? '' : "".concat(sumCompletedTasks) + ' of', "\n      ").concat(subTasks.length, " subtasks");
+}
+function loadTasks(tasks) {
+  var tasksHtml = tasks.map(function (task, index) {
+    return "\n      <div class=\"task-bar-task\" id=\"task-bar-task-".concat(index, "\" data-task-order=\"").concat(index, "\">\n        <h3 class=\"task-bar-task-heading\">").concat(task.title, "</h3>\n        <p \n          class=\"task-bar-task-subtasks\">\n            ").concat(loadSubTitle(task.subtasks), " \n        </p>\n      </div>\n    ");
+  });
+  return tasksHtml.join('');
+}
+function tasksColumns(columns) {
+  var columnsHtml = columns.map(function (column, index) {
+    return "\n      <div \n        class=\"task-bar-column\" \n        id=\"column-".concat(column.name.toLowerCase(), "\" \n        data-column=\"").concat(index, "\"\n      >\n        <div \n          class=\"task-bar-column-name\"\n          id=\"task-bar-column-name\"\n        >\n          <div \n            class=\"task-bar-column-tag-color\"\n            id=\"task-bar-column-tag-color-").concat(index, "\"\n          ></div>\n          <h4 \n            class=\"task-bar-heading\" \n            id=\"task-bar-heading\"\n          >\n              ").concat(column.name.toLowerCase(), " \n              ( ").concat(column.tasks.length, " )\n          </h4>\n        </div>\n        ").concat(loadTasks(column.tasks), "\n      </div>\n      \n    ");
+  });
+  columnsHtml.push("<div class=\"task-bar-column task-bar-add-new-column\">\n        <h1>".concat(addNewColumnButton('task-bar-add-new-column-button'), "</h1>\n    </div>"));
+  return columnsHtml.join('');
 }
 ;// CONCATENATED MODULE: ./src/utils/loadLayout.js
 
@@ -126,7 +146,7 @@ function taskBar() {
 
 
 var htmlElements = {
-  app: null,
+  appContainer: null,
   topBar: null,
   logoContainer: null,
   logo: null,
@@ -166,7 +186,7 @@ function updateSideBarState(state) {
   htmlElements.sideBar.dataset.sideBarToggle = state;
   htmlElements.sideBarToggleContainer.dataset.sideBarToggle = state;
   htmlElements.taskBar.dataset.sideBarToggle = state;
-  htmlElements.app.dataset.sideBarToggle = state;
+  htmlElements.appContainer.dataset.sideBarToggle = state;
   localStorage.sideBar = state;
 }
 function toggleSideBar() {
@@ -208,13 +228,13 @@ function loadSideBarToggle() {
 }
 function loadLayout(boardsData) {
   setThemeMode();
-  htmlElements.app = document.querySelector('#app');
-  if (htmlElements.app.clientWidth < 700) {
+  htmlElements.appContainer = document.querySelector('#app');
+  if (htmlElements.appContainer.clientWidth < 700) {
     appState.mobile = true;
   }
-  htmlElements.app.insertAdjacentHTML('afterbegin', taskBar());
-  htmlElements.app.insertAdjacentHTML('afterbegin', sideBar(boardsData));
-  htmlElements.app.insertAdjacentHTML('afterbegin', topBar(boardsData));
+  htmlElements.appContainer.insertAdjacentHTML('afterbegin', taskBar());
+  htmlElements.appContainer.insertAdjacentHTML('afterbegin', sideBar(boardsData));
+  htmlElements.appContainer.insertAdjacentHTML('afterbegin', topBar());
   getHtmlElements();
   loadLogo(appState.mobile);
   loadSideBarToggle();
@@ -223,12 +243,12 @@ function loadLayout(boardsData) {
   updateSideBarState(localStorage.sideBar);
 }
 function loadOnScreenResize() {
-  if (htmlElements.app.clientWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
+  if (htmlElements.appContainer.clientWidth < 700 && htmlElements.logo.dataset.logo !== 'mobile') {
     appState.mobile = true;
     loadLogo(appState.mobile);
     loadSideBarToggle(appState.mobile);
     reloadEventListeners();
-  } else if (htmlElements.app.clientWidth > 700 && htmlElements.logo.dataset.logo === 'mobile') {
+  } else if (htmlElements.appContainer.clientWidth > 700 && htmlElements.logo.dataset.logo === 'mobile') {
     appState.mobile = false;
     loadLogo(appState.mobile);
     loadSideBarToggle(appState.mobile);
@@ -236,16 +256,69 @@ function loadOnScreenResize() {
   }
 }
 window.addEventListener('resize', loadOnScreenResize);
+;// CONCATENATED MODULE: ./src/assets/images/icons/icon-cross.svg
+const icon_cross_namespaceObject = __webpack_require__.p + "assets/images/icon-cross.d4ca9e0d.svg";
+;// CONCATENATED MODULE: ./src/components/addNewTask.js
+
+function addNewTaskPanel() {
+  return "\n    <div class=\"screen-overlay\" id=\"screen-overlay\">\n      <form class=\"add-new-task-form\" id=\"add-new-task-form\">\n        <h2 class=\"new-task-form-heading\">Add New Task</h2>\n        <ul>\n          <li class=\"new-task-form-list-item title\">\n            <label for=\"title\">Title</label>\n            <input type=\"text\" id=\"title\" name=\"title\" placeholder=\"e.g. Take coffee break\"/>\n          </li>\n          <li class=\"new-task-form-list-item description\">\n            <label for=\"description\">Description</label>\n            <textarea\n              type=\"text\" \n              id=\"description\" \n              name=\"description\"\n              cols=\"1\"\n              rows=\"1\"\n            />\n            </textarea>\n          </li>\n          <li class=\"new-task-form-list-item subtasks\">\n            <label for=\"subtasks\">Subtasks</label>\n            <div class=\"subtasks-container\" id=\"subtasks-container\">\n              <div class=\"new-task-form-subtask-item\">\n                <input type=\"text\" id=\"subtasks\" name=\"subtask\"/>\n                <button class=\"remove-subtask-btn\">\n                  <svg data-src=".concat(icon_cross_namespaceObject, " class=\"remove-subtask-icon\" id=\"remove-subtask-1\"/>\n                </button>\n              </div>\n              <div class=\"new-task-form-subtask-item\">\n                <input type=\"text\" id=\"subtasks\" name=\"subtask\"/>\n                <button class=\"remove-subtask-btn\">\n                  <svg data-src=").concat(icon_cross_namespaceObject, " class=\"remove-subtask-icon\" id=\"remove-subtask-2\"/>\n                </button>\n              </div>\n            </div>\n            <button \n              class=\"add-new-subtask-btn secondary-btn\" \n              id=\"add-new-subtask-btn\">\n                + Add New Subtask\n              </button>\n          </li> \n          <li class=\"new-task-form-list-item status\">\n            <label for=\"create-task\">Status</label>\n            <input type=\"text\" id=\"create-task\" name=\"create-task\"/>\n            <button \n              class=\"primary-btn-L\" \n              id=\"create-new-task-btn\">\n                + Add New Subtask\n              </button>\n          </li>\n        </ul>\n      </form>\n    </div>\n  ");
+}
+function getNewSubtaskHtml() {
+  return "\n    <div class=\"new-task-form-subtask-item\">\n      <input type=\"text\" id=\"subtasks\" name=\"subtask\"/>\n      <button class=\"add-new-subtask-btn\">\n        <svg data-src=".concat(icon_cross_namespaceObject, " class=\"add-new-subtask-icon\" id=\"remove-subtask-2\"/>\n      </button>\n    </div>\n  ");
+}
+;// CONCATENATED MODULE: ./src/utils/taskHandler.js
+
+var taskHandler_htmlElements = {
+  addNewTaskBtn: null,
+  appContainer: null
+};
+var boards = null;
+function addNewTask() {}
+function taskHandler_getHtmlElements() {
+  taskHandler_htmlElements.addNewTaskBtn = document.querySelector('#add-new-task-btn');
+  taskHandler_htmlElements.appContainer = document.querySelector('#app');
+}
+function addNewSubTask(e) {
+  e.preventDefault();
+  var subtaskContainer = document.querySelector('#screen-overlay #subtasks-container');
+  subtaskContainer.insertAdjacentHTML('afterbegin', getNewSubtaskHtml());
+}
+function activateEventListenerSubtasks() {
+  var addNewSubTaskBtn = document.querySelector('#screen-overlay #add-new-subtask-btn');
+  addNewSubTaskBtn.addEventListener('click', addNewSubTask, false);
+}
+function handleScreenOverlay() {
+  var screenOverlay = document.querySelector('#screen-overlay');
+  screenOverlay.addEventListener('click', function (e) {
+    if (e.target.id === 'screen-overlay') {
+      screenOverlay.remove();
+    }
+  });
+}
+function openAddNewTaskForm() {
+  if (taskHandler_htmlElements.addNewTaskBtn.dataset.hasTasks === 'true') {
+    taskHandler_htmlElements.appContainer.insertAdjacentHTML('afterbegin', addNewTaskPanel());
+    handleScreenOverlay();
+    activateEventListenerSubtasks();
+  }
+}
+function activateTaskEvents(boardsData) {
+  taskHandler_getHtmlElements();
+  boards = boardsData;
+  taskHandler_htmlElements.addNewTaskBtn.addEventListener('click', openAddNewTaskForm);
+}
 ;// CONCATENATED MODULE: ./src/utils/boardHandler.js
+
 
 var boardHandler_htmlElements = {
   sideBarBoards: null,
   activeBoard: null,
   addNewTaskButton: null,
   taskBar: null,
-  boardTitleHeading: null
+  boardTitleHeading: null,
+  taskBarColumnName: null
 };
-var boards = null;
+var boardHandler_boards = null;
 function createNewBoard() {
   var newBoard = {
     title: 'New Boards',
@@ -261,21 +334,39 @@ function createNewBoard() {
   };
   console.log(newBoard);
 }
+function clearTaskBar() {
+  boardHandler_htmlElements.taskBar.innerHTML = '';
+}
 function updateAddNewTaskButton(buttonState) {
   boardHandler_htmlElements.addNewTaskButton.dataset.hasTasks = buttonState;
 }
 function loadEmptyTaskBar() {
+  clearTaskBar();
   updateAddNewTaskButton(false);
-  boardHandler_htmlElements.appContainer.insertAdjacentHTML('beforeend', emptyBoard());
+  boardHandler_htmlElements.taskBar.insertAdjacentHTML('afterbegin', emptyBoard());
 }
-function loadTasks(boardData) {
+function generateRandomColor() {
+  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  return randomColor;
+}
+function loadTagColor() {
+  boardHandler_htmlElements.taskBarColumnName = document.querySelectorAll('#task-bar-column-name');
+  boardHandler_htmlElements.taskBarColumnName.forEach(function (item) {
+    return item.children[0].style.backgroundColor = '#' + generateRandomColor();
+  });
+}
+function loadColumns(boardColumns) {
+  activateTaskEvents(boardColumns);
   updateAddNewTaskButton(true);
+  clearTaskBar();
+  boardHandler_htmlElements.taskBar.insertAdjacentHTML('afterbegin', tasksColumns(boardColumns));
+  loadTagColor();
 }
-function checkIfTasksExist() {
+function checkTasksOnBoard() {
   var activeBoard = boardHandler_htmlElements.activeBoard.innerText;
-  boards.forEach(function (board) {
+  boardHandler_boards.forEach(function (board) {
     if ((board === null || board === void 0 ? void 0 : board.name) == activeBoard) {
-      (board === null || board === void 0 ? void 0 : board.columns) != undefined ? loadTasks(board) : loadEmptyTaskBar();
+      (board === null || board === void 0 ? void 0 : board.columns) != undefined ? loadColumns(board.columns) : loadEmptyTaskBar();
     }
   });
 }
@@ -288,7 +379,7 @@ function updateBoardState(currentTarget) {
   currentTarget.dataset.boardActive = true;
   boardHandler_htmlElements.activeBoard = currentTarget;
   boardHandler_htmlElements.boardTitleHeading.innerText = boardHandler_htmlElements.activeBoard.innerText;
-  checkIfTasksExist();
+  checkTasksOnBoard();
 }
 function processInteractionOnBoards(e) {
   if (e.currentTarget.id === 'create-new-board-btn') {
@@ -305,11 +396,11 @@ function boardHandler_activateEventListeners() {
 function boardHandler_getHtmlElements() {
   boardHandler_htmlElements.sideBarBoards = document.querySelector('#side-bar-boards').querySelectorAll('button');
   boardHandler_htmlElements.addNewTaskButton = document.querySelector('#add-new-task-btn');
-  boardHandler_htmlElements.appContainer = document.querySelector('#task-bar');
+  boardHandler_htmlElements.taskBar = document.querySelector('#task-bar');
   boardHandler_htmlElements.boardTitleHeading = document.querySelector('#board-title-heading');
 }
 function handleBoards(boardsData) {
-  boards = boardsData;
+  boardHandler_boards = boardsData;
   boardHandler_getHtmlElements();
   boardHandler_activateEventListeners();
 }
@@ -338,7 +429,7 @@ window.addEventListener('load', loadApp);
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__(101));
+/******/ var __webpack_exports__ = (__webpack_exec__(669));
 /******/ }
 ]);
-//# sourceMappingURL=bundle16a5273ca904d2dc41a9.js.map
+//# sourceMappingURL=bundleeeb219277246a1a81dbd.js.map
