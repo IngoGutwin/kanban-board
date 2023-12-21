@@ -12,14 +12,14 @@
     }
 
     .new-task-form-list-item {
-      @apply flex flex-col transition ease-linear duration-300 mb-6 px-8;
+      @apply flex flex-col transition ease-linear duration-300 px-8;
 
       .subtasks-container {
-        @apply max-h-[30vh] overflow-y-auto mb-2;
-        transition: max-height 0.3s ease-out;
+        @apply flex flex-col gap-2 max-h-[30vh] overflow-y-auto;
+        transition: max-height 200s ease-out;
 
         .new-task-form-subtask-item {
-          @apply flex items-center justify-between mb-3;
+          @apply flex items-center justify-between;
           animation: addSubtask 300ms ease-in;
 
           .remove-subtask-btn {
@@ -41,15 +41,6 @@
             }
           }
         }
-
-        @keyframes expandSubtaskContainer {
-          0% {
-            height: 0;
-          }
-          100% {
-            height: auto;
-          }
-        }
       }
 
       label:nth-child(n) {
@@ -63,6 +54,7 @@
     }
 
     .subtasks {
+      @apply flex flex-col gap-4;
       > button {
         @apply w-full;
       }
