@@ -1,18 +1,16 @@
 .task-bar {
-  @apply flex flex-grow col-start-2 col-end-3 transition-transform ease-out duration-700 overflow-auto;
-
-  &[data-side-bar-toggle='hidden'] {
-    @apply col-start-1 col-span-full row-start-2 w-full;
-  }
+  @apply flex col-start-2 col-end-3 row-start-2 row-span-1 overflow-auto;
+  height: calc(100vh - 95px);
 
   .task-bar-column {
     @apply flex flex-col items-center min-w-[280px] max-w-[280px];
+    animation: showColumn 300ms ease-in;
 
     .task-bar-column-name {
       @apply w-full flex items-center text-center;
 
       .task-bar-column-tag-color {
-        @apply w-4 h-4 rounded-full ml-6;
+        @apply w-4 h-4 rounded-full;
       }
 
       .task-bar-heading {
@@ -35,13 +33,28 @@
     &:nth-child(odd) {
       @apply mx-4;
     }
+
+    @keyframes showColumn {
+      0% {
+        transform: translateX(300%);
+        opacity: 0;
+      }
+      100% {
+        transform: none;
+        opacity: 1;
+      }
+    }
   }
 
   .task-bar-add-new-column {
-    @apply text-medium-grey justify-center;
+    @apply text-medium-grey bg-lines-light dark:bg-lines-dark justify-center mt-14 rounded-lg h-full mr-4;
 
     .task-bar-add-new-column-button {
-      @apply cursor-pointer;
+      @apply cursor-pointer font-bold;
+
+      &:hover {
+        @apply text-main-purple;
+      }
     }
   }
 

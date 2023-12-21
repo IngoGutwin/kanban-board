@@ -1,4 +1,5 @@
 import { emptyBoard, tasksColumns } from 'Components/taskBar';
+import { activateTaskEvents } from 'Utils/taskHandler';
 
 const htmlElements = {
   sideBarBoards: null,
@@ -60,6 +61,7 @@ function loadTagColor() {
 }
 
 function loadColumns(boardColumns) {
+  activateTaskEvents(boardColumns);
   updateAddNewTaskButton(true);
   clearTaskBar();
   htmlElements.taskBar.insertAdjacentHTML(

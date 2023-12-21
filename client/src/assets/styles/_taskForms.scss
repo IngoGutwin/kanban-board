@@ -1,0 +1,116 @@
+.screen-overlay {
+  @apply bg-black/40 h-full w-full absolute top-[0] left-[0] flex justify-center items-center z-50;
+  animation: showScreenLayer 300ms ease-in-out;
+
+  .add-new-task-form {
+    @apply w-[343px] h-[80vh] bg-white dark:bg-dark-grey text-black flex flex-col justify-center items-center dark:text-white rounded-lg;
+    animation: showTaskForm 0.15s ease-in-out;
+    transition: height 0.3s ease-out;
+
+    .new-task-form-heading {
+      @apply pb-6 pt-7 px-8;
+    }
+
+    .new-task-form-list-item {
+      @apply flex flex-col transition ease-linear duration-300 mb-6 px-8;
+
+      .subtasks-container {
+        @apply max-h-[30vh] overflow-y-auto mb-2;
+        transition: max-height 0.3s ease-out;
+
+        .new-task-form-subtask-item {
+          @apply flex items-center justify-between mb-3;
+          animation: addSubtask 300ms ease-in;
+
+          .remove-subtask-btn {
+            @apply pr-1;
+          }
+
+          > input {
+            @apply flex-grow mr-2 p-2 min-w-fit bg-white dark:bg-dark-grey dark:border-white/25;
+          }
+
+          @keyframes addSubtask {
+            0% {
+              opacity: 0;
+              transform: scale(0);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        }
+
+        @keyframes expandSubtaskContainer {
+          0% {
+            height: 0;
+          }
+          100% {
+            height: auto;
+          }
+        }
+      }
+
+      label:nth-child(n) {
+        @apply text-medium-grey dark:text-white font-bold text-xs;
+      }
+
+      input:nth-child(n),
+      textarea:nth-child(n) {
+        @apply h-12 border-2 text-black dark:text-white rounded-lg bg-white dark:bg-dark-grey dark:border-white/25;
+      }
+    }
+
+    .subtasks {
+      > button {
+        @apply w-full;
+      }
+    }
+
+    .status > button {
+      @apply mt-6;
+    }
+
+    > ul {
+      @apply w-full h-full flex flex-col justify-around;
+    }
+
+    @keyframes showTaskForm {
+      from {
+        opacity: 0;
+        transform: translateX(200%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+
+    @keyframes addListItem {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @keyframes showScreenLayer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@screen md {
+  .screen-overlay {
+    .add-new-task-form {
+      @apply w-[480px];
+    }
+  }
+}

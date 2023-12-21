@@ -1,8 +1,14 @@
+function addNewColumnButton(cssClass) {
+  return `
+    <button class="${cssClass}" id="task-bar-add-new-column">+ Add New Column</button>
+  `;
+}
+
 export function emptyBoard() {
   return `
     <div class="task-bar-empty-board" id="task-empty-board">
       <h2 class="task-bar-heading">This board is empty. Create a new column to get started.</h2>
-      <button class="primary-btn-L" id="task-bar-add-new-columns">+ Add New Column</button>
+      ${addNewColumnButton('primary-btn-L')}
     </div>
   `;
 }
@@ -71,7 +77,9 @@ export function tasksColumns(columns) {
     `
   );
   columnsHtml.push(
-    '<div class="task-bar-column task-bar-add-new-column"><h1 class="task-bar-add-new-column-button" id="task-bar-add-new-column-button">+ New Column</h1></div>'
+    `<div class="task-bar-column task-bar-add-new-column">
+        <h1>${addNewColumnButton('task-bar-add-new-column-button')}</h1>
+    </div>`
   );
   return columnsHtml.join('');
 }

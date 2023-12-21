@@ -1,0 +1,19 @@
+/* width */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-medium-grey dark:bg-lines-dark;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-lines-dark dark:bg-lines-light;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-main-purple-hover;
+}
