@@ -1,4 +1,5 @@
-import { emptyBoard } from 'Components/taskBar';
+import { emptyBoard, tasksColumns } from 'Components/taskBar';
+import { activateTaskEvents } from 'Utils/taskHandler';
 
 const htmlElements = {
   sideBarBoards: null,
@@ -6,6 +7,7 @@ const htmlElements = {
   addNewTaskButton: null,
   taskBar: null,
   boardTitleHeading: null,
+  taskBarColumnName: null,
 };
 
 let boards = null;
@@ -29,24 +31,53 @@ function createNewBoard() {
   console.log(newBoard);
 }
 
+function clearTaskBar() {
+  htmlElements.taskBar.innerHTML = '';
+}
+
 function updateAddNewTaskButton(buttonState) {
   htmlElements.addNewTaskButton.dataset.hasTasks = buttonState;
 }
 
 function loadEmptyTaskBar() {
+  clearTaskBar();
   updateAddNewTaskButton(false);
-  htmlElements.appContainer.insertAdjacentHTML('beforeend', emptyBoard());
+  htmlElements.taskBar.insertAdjacentHTML('afterbegin', emptyBoard());
 }
 
-function loadTasks(boardData) {
+function generateRandomColor() {
+  let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  return randomColor;
+}
+
+function loadTagColor() {
+  htmlElements.taskBarColumnName = document.querySelectorAll(
+    '#task-bar-column-name'
+  );
+  htmlElements.taskBarColumnName.forEach(
+    (item) =>
+      (item.children[0].style.backgroundColor = '#' + generateRandomColor())
+  );
+}
+
+function loadColumns(boardColumns) {
+  activateTaskEvents(boardColumns);
   updateAddNewTaskButton(true);
+  clearTaskBar();
+  htmlElements.taskBar.insertAdjacentHTML(
+    'afterbegin',
+    tasksColumns(boardColumns)
+  );
+  loadTagColor();
 }
 
-function checkIfTasksExist() {
+function checkTasksOnBoard() {
   let activeBoard = htmlElements.activeBoard.innerText;
   boards.forEach((board) => {
     if (board?.name == activeBoard) {
-      board?.columns != undefined ? loadTasks(board) : loadEmptyTaskBar();
+      board?.columns != undefined
+        ? loadColumns(board.columns)
+        : loadEmptyTaskBar();
     }
   });
 }
@@ -63,7 +94,7 @@ function updateBoardState(currentTarget) {
   currentTarget.dataset.boardActive = true;
   htmlElements.activeBoard = currentTarget;
   htmlElements.boardTitleHeading.innerText = htmlElements.activeBoard.innerText;
-  checkIfTasksExist();
+  checkTasksOnBoard();
 }
 
 function processInteractionOnBoards(e) {
@@ -85,7 +116,7 @@ function getHtmlElements() {
     .querySelector('#side-bar-boards')
     .querySelectorAll('button');
   htmlElements.addNewTaskButton = document.querySelector('#add-new-task-btn');
-  htmlElements.appContainer = document.querySelector('#task-bar');
+  htmlElements.taskBar = document.querySelector('#task-bar');
   htmlElements.boardTitleHeading = document.querySelector(
     '#board-title-heading'
   );

@@ -1,8 +1,9 @@
 .top-bar {
-  @apply bg-white dark:bg-dark-grey w-full flex items-center transition ease-in duration-300 col-span-full;
+  @apply bg-white dark:bg-dark-grey w-full flex items-center col-span-full;
 
   .logo-container {
     @apply pl-4 py-5;
+
     .logo {
       @apply w-6;
     }
@@ -11,11 +12,35 @@
   .board-title {
     @apply flex items-center pl-4;
 
-    .side-bar-toggle-container {
-      .side-bar-toggle-btn {
-        @apply px-5 py-5 transition ease-linear duration-300;
-      }
+    .board-title-title {
+      animation: insertBoardTitle 0.3s ease-in;
 
+      @keyframes insertBoardTitle {
+        0% {
+          opacity: 0;
+          width: 0;
+        }
+        50% {
+          opacity: 0.5;
+          width: 30%;
+        }
+        100% {
+          opacity: 1;
+          width: 100%;
+        }
+      }
+    }
+
+    .side-bar-toggle-container {
+      @apply transition ease-out duration-500;
+
+      .side-bar-toggle-btn {
+        @apply px-5 py-5;
+
+        .side-bar-toggle-icon {
+          @apply h-2 w-4;
+        }
+      }
       &[data-side-bar-toggle='hidden'] {
         @apply rotate-90;
       }
@@ -39,9 +64,14 @@
       &[data-has-tasks='true'] {
         @apply opacity-100;
       }
+
+      &[data-has-tasks='false'] {
+        @apply bg-main-purple-hover;
+      }
     }
+
     .board-options {
-      @apply p-4 pr-9 flex justify-center items-center;
+      @apply p-4 pr-4 flex justify-center items-center;
 
       .board-options-icon {
         @apply h-4 fill-medium-grey;
@@ -61,11 +91,10 @@
     .board-title {
       @apply pl-6 py-7;
     }
+
     .board-controls {
-      .add-new-task-btn {
-        .add-new-task-icon {
-          @apply mr-2;
-        }
+      .board-options {
+        @apply pr-9;
       }
     }
   }
@@ -75,6 +104,9 @@
   .top-bar {
     .board-controls {
       .add-new-task-btn {
+        .add-new-task-icon {
+          @apply mr-2;
+        }
         .add-new-task-heading {
           @apply block text-white;
         }
