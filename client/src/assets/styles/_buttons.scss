@@ -7,7 +7,7 @@
 }
 
 .primary-btn-S {
-  @apply py-5 px-6 text-white font-bold;
+  @apply py-2 px-6 text-white font-bold;
 
   &:hover {
     @apply bg-main-purple-hover;
@@ -15,15 +15,15 @@
 }
 
 .secondary-btn {
-  @apply py-5 px-6 bg-main-purple opacity-10 text-main-purple;
+  @apply py-2 px-6 bg-main-purple/10 text-main-purple dark:bg-white;
 
   &:hover {
-    @apply bg-main-purple opacity-25;
+    @apply bg-main-purple/25 dark:bg-lines-light;
   }
 }
 
 .destructive-btn {
-  @apply py-5 px-6 bg-red text-white font-bold;
+  @apply py-2 px-6 bg-red text-white font-bold;
 
   &:hover {
     @apply bg-red-hover;
@@ -34,5 +34,5 @@
 .primary-btn-S,
 .secondary-btn,
 .destructive-btn {
-  @apply rounded-full w-fit font-bold transition-all ease-in duration-200;
+  @apply rounded-full font-bold transition-all ease-in duration-200;
 }

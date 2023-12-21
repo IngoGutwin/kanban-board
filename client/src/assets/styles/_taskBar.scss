@@ -1,11 +1,64 @@
 .task-bar {
-  @apply flex flex-grow justify-center items-center col-start-2 col-end-3 transition-transform ease-out duration-700 text-center;
+  @apply flex col-start-2 col-end-3 row-start-2 row-span-1 overflow-auto;
+  height: calc(100vh - 95px);
 
-  &[data-side-bar-toggle='hidden'] {
-    @apply col-start-1 col-span-full row-start-2;
+  .task-bar-column {
+    @apply flex flex-col items-center min-w-[280px] max-w-[280px];
+    animation: showColumn 300ms ease-in;
+
+    .task-bar-column-name {
+      @apply w-full flex items-center text-center;
+
+      .task-bar-column-tag-color {
+        @apply w-4 h-4 rounded-full;
+      }
+
+      .task-bar-heading {
+        @apply uppercase text-medium-grey p-5;
+      }
+    }
+
+    .task-bar-task {
+      @apply w-[280px] flex flex-col justify-center font-bold bg-white dark:bg-dark-grey mb-5 rounded-lg;
+
+      .task-bar-task-heading {
+        @apply text-black dark:text-white pt-6 px-4;
+      }
+
+      .task-bar-task-subtasks {
+        @apply text-medium-grey text-xs leading-4 pt-2 pb-6  px-4;
+      }
+    }
+
+    &:nth-child(odd) {
+      @apply mx-4;
+    }
+
+    @keyframes showColumn {
+      0% {
+        transform: translateX(300%);
+        opacity: 0;
+      }
+      100% {
+        transform: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  .task-bar-add-new-column {
+    @apply text-medium-grey bg-lines-light dark:bg-lines-dark justify-center mt-14 rounded-lg h-full mr-4;
+
+    .task-bar-add-new-column-button {
+      @apply cursor-pointer font-bold;
+
+      &:hover {
+        @apply text-main-purple;
+      }
+    }
   }
 
   .task-bar-empty-board {
-    @apply flex flex-col gap-4 items-center px-4;
+    @apply flex flex-col gap-4 justify-center items-center px-4 w-full text-center;
   }
 }

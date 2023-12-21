@@ -20,16 +20,12 @@ export function logo(isScreenMobile) {
   return `<svg data-src=${logoType[0]} class="logo" id="logo" data-logo="${logoType[1]}"/>`;
 }
 
-export function topBar(boardsData) {
-  if (boardsData[0] === undefined) {
-    console.log(boardsData);
-    boardsData[0] = { name: 'NO BOARDS' };
-  }
+export function topBar() {
   return `
     <div class="top-bar" id="top-bar">
       <div class="logo-container" id="logo-container"></div>
       <div class="board-title" id="board-title">
-        <h1 class="board-title-title" id="board-title-heading">No Board Selected</h1>
+        <h1 class="board-title-title" id="board-title-heading"></h1>
       </div>
       <div class="board-controls">
         <button class="add-new-task-btn primary-btn-L" id="add-new-task-btn" data-has-tasks="false">

@@ -36,11 +36,11 @@ export function sideBarToggle(isScreenMobile) {
 function loadBoards(boardsData) {
   const boardButtons = boardsData.map(
     (board) => `
-    <button class="side-bar-board" data-board-active="false">
-        <svg data-src=${boardIcon} class="side-bar-board-icon"/>
-        <h3 class="side-bar-board-name">${board.name}</h3>
-      </button>
-  `
+      <button class="side-bar-board" data-board-active="false">
+          <svg data-src=${boardIcon} class="side-bar-board-icon"/>
+          <h3 class="side-bar-board-name">${board.name}</h3>
+        </button>
+      `
   );
   return boardButtons.join('');
 }
